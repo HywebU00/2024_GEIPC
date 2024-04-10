@@ -2396,6 +2396,7 @@ img {
   }
   .header .container .navigation .webSearchBtn {
     display: block;
+    padding-right: 0;
   }
   @media screen and (max-width: 767px) {
     .header .container .navigation .webSearchBtn {
@@ -4227,9 +4228,9 @@ img {
     position: relative;
   }
   .header .navigation .submenuBox > div {
-    margin-left: 20px;
-    padding-left: 20px;
+    padding: 0 20px;
     border-left: 1px solid #1b224c;
+    position: relative;
   }
   .header .navigation .submenuBox > div + div::after {
     content: "";
