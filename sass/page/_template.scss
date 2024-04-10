@@ -70,6 +70,13 @@ body {
 }
 
 ////////////////////////////////////////////////////////////
+.inkv {
+  .container {
+    padding: 0;
+    max-width: none;
+  }
+}
+
 // 為了與首頁區隔，請在內頁加上innerPage ClassName
 .innerPage {
   margin-bottom: 0;
