@@ -2111,6 +2111,7 @@ img {
     line-height: 1.45em;
     font-family: Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
     -webkit-text-size-adjust: none;
+    font-size: 1.125em;
   }
   body.smallSize {
     font-size: 0.938em;
@@ -2279,7 +2280,7 @@ img {
   }
   .language {
     font-weight: bold;
-    font-size: 0.8888888889rem;
+    font-size: 1rem;
     width: 140px;
     z-index: 9999;
     position: relative;
@@ -2350,7 +2351,7 @@ img {
     .language.typeB > button, .language.typeB > a {
       color: #1b224c;
       height: 25px;
-      font-size: 1rem;
+      font-size: 1.125rem;
       position: relative;
       background: none;
       padding: 0;
@@ -4211,7 +4212,7 @@ img {
   .header .navigation .navList li a {
     display: block;
     padding: 0.5em;
-    font-size: 0.8888888889rem;
+    font-size: 1rem;
     text-decoration: none;
     color: #121213;
   }
@@ -4315,7 +4316,7 @@ img {
     white-space: nowrap;
     color: #222;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   .mainMenu > ul > li > a:focus-visible {
     box-shadow: 0 0 0 2px inset red;
@@ -4591,10 +4592,10 @@ img {
     line-height: 1.65em;
   }
   footer p a {
-    font-size: 0.8888888889rem;
+    font-size: 1rem;
   }
   footer .title {
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 500;
     margin-bottom: 5px;
   }
@@ -4797,7 +4798,7 @@ img {
     color: #dddddd;
     padding: 5px 0 5px 15px;
     position: relative;
-    font-size: 0.7777777778rem;
+    font-size: 0.875rem;
   }
   .fatFooter.typeB nav ul li ul li a::before {
     content: "-";
@@ -7151,22 +7152,23 @@ img {
     list-style: none;
     padding: 0;
   }
-  .accordion ul li.accordionList {
+  .accordion ul li {
     margin-bottom: 0.5em;
   }
-  .accordion ul li.accordionList .accordionBtn {
+  .accordion ul li .accordionList {
     width: 100%;
     border: none;
     border-radius: 0;
     display: block;
     text-align: left;
-    background-color: #21baff;
+    background-color: #1b224c;
+    border-radius: 0.25em;
     color: #fff;
     text-decoration: none;
-    padding: 5px 50px 5px 20px;
+    padding: 16px 50px 16px 20px;
     position: relative;
   }
-  .accordion ul li.accordionList.active .accordionArrow {
+  .accordion ul li.active .accordionArrow {
     top: calc(50% - 2px);
     transform: rotate(225deg);
   }
@@ -7416,7 +7418,6 @@ img {
   }
   html {
     scroll-behavior: smooth;
-    font-size: 18px;
   }
   body {
     background: #fff9f7;
@@ -7625,7 +7626,7 @@ img {
   .mobileSidebar .mobileArea .sideMainMenu a {
     display: block;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.125rem;
     text-decoration: none;
     transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     text-align: left;
@@ -7772,7 +7773,7 @@ img {
     display: block;
     line-height: 1.5em;
     padding: 0.25em 0.5em 0.25em 1.1em;
-    font-size: 0.8888888889rem;
+    font-size: 1rem;
     color: #fff;
     font-weight: normal;
     text-decoration: none;
@@ -8060,9 +8061,9 @@ img {
   }
   .mpSlider img {
     width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    aspect-ratio: 3/2;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .cpSlider {
     padding: 1em 0;
@@ -8127,10 +8128,10 @@ img {
   }
   .swiperArrow::before {
     content: "";
-    width: 20px;
-    height: 30px;
+    width: 57px;
+    height: 50px;
     display: block;
-    background: url("../vendor/swiper/ar.svg") center no-repeat;
+    background: url("../images/arr_l.png") center no-repeat;
   }
   .swiperArrow.prevSlider {
     left: 0px;
@@ -8143,9 +8144,6 @@ img {
   }
   .swiperArrow.swiperArrow-disabled {
     opacity: 0.3;
-  }
-  .swiperArrow:focus-visible {
-    outline: 2px solid red;
   }
   .cpSlider .swiper {
     margin: 0 40px;
@@ -8234,7 +8232,7 @@ img {
   }
   .mpSlider .item .titleBox {
     position: absolute;
-    max-width: 66.6666666667rem;
+    max-width: 75rem;
     padding: 20px;
     width: 100%;
     margin: auto;
@@ -8254,30 +8252,30 @@ img {
   .mpSlider .item .titleBox h2 {
     padding: 0;
     margin: 0 0 10px;
-    font-size: 1.3333333333rem;
+    font-size: 1.5rem;
   }
   @media screen and (max-width: 767px) {
     .mpSlider .item .titleBox h1,
     .mpSlider .item .titleBox h2 {
-      font-size: 1rem;
+      font-size: 1.125rem;
     }
   }
   .mpSlider .item .titleBox h1 {
-    font-size: 2.2222222222rem;
+    font-size: 2.5rem;
   }
   @media screen and (max-width: 991px) {
     .mpSlider .item .titleBox h1 {
-      font-size: 1.6666666667rem;
+      font-size: 1.875rem;
     }
   }
   @media screen and (max-width: 767px) {
     .mpSlider .item .titleBox h1 {
-      font-size: 1.2222222222rem;
+      font-size: 1.375rem;
     }
   }
   .mpSlider .item .titleBox p {
     margin: 0;
-    font-size: 0.8888888889rem;
+    font-size: 1rem;
   }
   .mpSlider .item .txtBox {
     position: absolute;
@@ -8287,7 +8285,7 @@ img {
     width: 100%;
   }
   .mpSlider .item .txtBox .txt {
-    font-size: 1rem;
+    font-size: 1.125rem;
     padding: 20px;
     width: 100%;
     margin: 0 auto;
@@ -8296,7 +8294,7 @@ img {
   }
   @media screen and (max-width: 991px) {
     .mpSlider .item .txtBox .txt {
-      font-size: 0.8888888889rem;
+      font-size: 1rem;
     }
   }
   .bannerInfo {
@@ -8333,7 +8331,7 @@ img {
     font-family: "Thasadith", sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2.8125rem;
     position: absolute;
     left: 0;
   }
@@ -8361,7 +8359,7 @@ img {
     width: 100%;
     padding-right: 50px;
     color: #000;
-    font-size: 1.2222222222rem;
+    font-size: 1.375rem;
     padding: 0 70px 0 0;
     margin: 0;
     font-weight: 500;
@@ -8376,12 +8374,12 @@ img {
   }
   @media screen and (max-width: 991px) {
     .bannerInfo .item .title {
-      font-size: 1.1111111111rem;
+      font-size: 1.25rem;
     }
   }
   @media screen and (max-width: 767px) {
     .bannerInfo .item .title {
-      font-size: 1rem;
+      font-size: 1.125rem;
     }
   }
   .bannerInfo .item:not(.active) .title::before {
@@ -8407,14 +8405,14 @@ img {
     background: #000;
   }
   .bannerInfo .item .description {
-    font-size: 1rem;
+    font-size: 1.125rem;
     max-width: 480px;
     line-height: 1.6;
     padding-top: 20px;
   }
   @media screen and (max-width: 767px) {
     .bannerInfo .item .description {
-      font-size: 0.8888888889rem;
+      font-size: 1rem;
     }
   }
   section + section {
@@ -8426,16 +8424,16 @@ img {
   }
   @media screen and (max-width: 991px) {
     section .titleBox {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
   }
   @media screen and (max-width: 767px) {
     section .titleBox {
-      font-size: 1.3333333333rem;
+      font-size: 1.5rem;
     }
   }
   section .titleBox .zh {
-    font-size: 2.6666666667rem;
+    font-size: 3rem;
     font-weight: 500;
     line-height: 1.2;
     padding-bottom: 15px;
@@ -8445,12 +8443,12 @@ img {
   }
   @media screen and (max-width: 991px) {
     section .titleBox .zh {
-      font-size: 2.2222222222rem;
+      font-size: 2.5rem;
     }
   }
   @media screen and (max-width: 767px) {
     section .titleBox .zh {
-      font-size: 1.7777777778rem;
+      font-size: 2rem;
     }
   }
   section .titleBox .zh:before {
@@ -8464,7 +8462,7 @@ img {
     bottom: 0;
   }
   section .titleBox .en {
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-family: "Thasadith", sans-serif;
     font-weight: 600;
   }
@@ -8474,7 +8472,7 @@ img {
     display: block;
     margin: 0 0 0 auto;
     color: #000;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 500;
     background: #fff;
     border-radius: 50px;
@@ -8489,7 +8487,7 @@ img {
   @media screen and (max-width: 575px) {
     section .more {
       margin: 0 auto !important;
-      font-size: 0.8888888889rem;
+      font-size: 1rem;
       padding: 10px;
     }
   }
@@ -8517,7 +8515,7 @@ img {
   section .more::after {
     content: "+";
     font-family: "Thasadith", sans-serif;
-    font-size: 1.8888888889rem;
+    font-size: 2.125rem;
     line-height: 0;
     color: #fff;
     position: absolute;
@@ -8671,7 +8669,7 @@ img {
     position: absolute;
     font-weight: bold;
     color: #fff;
-    font-size: 0.7777777778rem;
+    font-size: 0.875rem;
     background: #f88906;
     transform: translateY(-105%) translateX(95px);
     border-radius: 2px;
@@ -8690,7 +8688,7 @@ img {
     width: 70px;
     color: #000;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin-right: clamp(20px, 5%, 50px);
   }
   @media screen and (max-width: 575px) {
@@ -8718,7 +8716,7 @@ img {
     color: rgba(0, 0, 0, 0.8);
     margin: 0;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin-right: 80px;
   }
   @media screen and (max-width: 575px) {
@@ -8824,7 +8822,7 @@ img {
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 500;
     background: rgba(0, 0, 0, 0.4);
     padding: 15px;
@@ -8835,7 +8833,7 @@ img {
     .videoBox .item .title,
     .adSlider .item .title,
     .projectBox .item .title {
-      font-size: 1.6666666667rem;
+      font-size: 1.875rem;
     }
   }
   @media screen and (max-width: 767px) {
@@ -8844,7 +8842,7 @@ img {
     .videoBox .item .title,
     .adSlider .item .title,
     .projectBox .item .title {
-      font-size: 1.2222222222rem;
+      font-size: 1.375rem;
     }
   }
   .resourcesBox .control,
@@ -8975,7 +8973,7 @@ img {
     position: relative;
     background: #fff;
     color: #000;
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.2;
     font-weight: 400;
     padding: 30px 10px;
@@ -9084,7 +9082,7 @@ img {
     color: #fff;
     background: #1b224c;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.125rem;
     padding: 26px 0;
     margin-right: clamp(20px, 5%, 50px);
   }
@@ -9115,7 +9113,7 @@ img {
     color: rgba(0, 0, 0, 0.8);
     margin: 0;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin-right: 80px;
   }
   @media screen and (max-width: 575px) {
@@ -9239,7 +9237,7 @@ img {
   }
   .mapBox .islands .title {
     position: absolute;
-    font-size: 0.8888888889rem;
+    font-size: 1rem;
     padding: 2px 10px;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
@@ -9268,20 +9266,35 @@ img {
   .mapBox .mainIsland svg {
     width: 100%;
   }
-  .mapBox .mainIsland svg a:hover, .mapBox .mainIsland svg a.active, .mapBox .mainIsland svg a.clickActive, .mapBox .mainIsland svg a:focus-visible {
+  .mapBox .mainIsland svg a:hover,
+  .mapBox .mainIsland svg .active,
+  .mapBox .mainIsland svg .clickActive,
+  .mapBox .mainIsland svg a:focus-visible {
     outline: none;
     z-index: 9;
   }
-  .mapBox .mainIsland svg a:hover .cls1, .mapBox .mainIsland svg a.active .cls1, .mapBox .mainIsland svg a.clickActive .cls1, .mapBox .mainIsland svg a:focus-visible .cls1 {
+  .mapBox .mainIsland svg a:hover .cls1,
+  .mapBox .mainIsland svg .active .cls1,
+  .mapBox .mainIsland svg .clickActive .cls1,
+  .mapBox .mainIsland svg a:focus-visible .cls1 {
     fill: #e58787;
   }
-  .mapBox .mainIsland svg a:hover .cls2, .mapBox .mainIsland svg a.active .cls2, .mapBox .mainIsland svg a.clickActive .cls2, .mapBox .mainIsland svg a:focus-visible .cls2 {
+  .mapBox .mainIsland svg a:hover .cls2,
+  .mapBox .mainIsland svg .active .cls2,
+  .mapBox .mainIsland svg .clickActive .cls2,
+  .mapBox .mainIsland svg a:focus-visible .cls2 {
     fill: #70aecf;
   }
-  .mapBox .mainIsland svg a:hover .cls3, .mapBox .mainIsland svg a.active .cls3, .mapBox .mainIsland svg a.clickActive .cls3, .mapBox .mainIsland svg a:focus-visible .cls3 {
+  .mapBox .mainIsland svg a:hover .cls3,
+  .mapBox .mainIsland svg .active .cls3,
+  .mapBox .mainIsland svg .clickActive .cls3,
+  .mapBox .mainIsland svg a:focus-visible .cls3 {
     fill: #e6b069;
   }
-  .mapBox .mainIsland svg a:hover .cls4, .mapBox .mainIsland svg a.active .cls4, .mapBox .mainIsland svg a.clickActive .cls4, .mapBox .mainIsland svg a:focus-visible .cls4 {
+  .mapBox .mainIsland svg a:hover .cls4,
+  .mapBox .mainIsland svg .active .cls4,
+  .mapBox .mainIsland svg .clickActive .cls4,
+  .mapBox .mainIsland svg a:focus-visible .cls4 {
     fill: #d4c200;
   }
   .mapBox .mainIsland svg .cls1,
@@ -9440,6 +9453,7 @@ img {
   }
   .mapBox .cityBox .buttonBox ul li {
     width: calc((100% - 20px) / 3);
+    border-radius: 8px;
   }
   .mapBox .cityBox .buttonBox ul li:first-child {
     width: 100%;
@@ -9451,7 +9465,7 @@ img {
     width: 100%;
     border-radius: 8px;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.125rem;
     color: #fff;
     background: #1b224c;
     padding: 5px 10px;
@@ -9496,7 +9510,7 @@ img {
     background: #d8b9e8;
   }
   .projectBox .col .item .city {
-    font-size: 1.1111111111rem;
+    font-size: 1.25rem;
     text-align: center;
     width: -moz-fit-content;
     width: fit-content;
@@ -9506,7 +9520,7 @@ img {
   .projectBox .col .item .title {
     color: #000;
     line-height: 1.4;
-    font-size: 1.1111111111rem;
+    font-size: 1.25rem;
     font-weight: 400;
     padding: 10px 30px;
     position: relative;
@@ -10003,24 +10017,147 @@ img {
   .webLink li a:focus-visible {
     outline: red 2px solid;
   }
-  .cp .editor {
-    max-width: 906px;
+  .Syncing_slider {
+    margin-bottom: 2rem;
+  }
+  .sliderFor a {
+    display: block;
+    height: 100%;
+  }
+  .sliderFor .swiperArrow {
+    padding: 10px;
+  }
+  .sliderFor .imgContainer {
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 36.25rem;
+  }
+  .sliderFor .imgContainer img {
+    min-height: 100%;
+    max-height: 100%;
+  }
+  @media screen and (max-width: 991px) {
+    .sliderFor .imgContainer {
+      height: 25rem;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .sliderFor .imgContainer {
+      height: remSize(360);
+    }
+  }
+  .navSlider {
+    width: 60%;
     margin: 0 auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
   }
-  .cp .sheet {
-    margin-bottom: 40px;
+  .navSlider .imgContainer {
+    position: relative;
+    height: 5.375rem;
   }
-  .cp .sheet .editorTitle {
-    text-align: center;
+  .navSlider .imgContainer img {
+    height: inherit;
+    width: inherit;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .cp .editorTitle {
-    font-size: 2rem;
-    line-height: 1;
-    margin-bottom: 30px;
+  .navSlider .imgContainer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #000;
+    opacity: 0.6;
   }
-  .cp .editorPic {
-    line-height: 0;
-    text-align: center;
+  .navSlider .swiper-wrapper {
+    align-items: center;
+  }
+  .navSlider .swiper-slide-thumb-active::before {
+    opacity: 0;
+  }
+  .leftBlock .nodeMenu {
+    padding: 0;
+  }
+  .leftBlock .title {
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-weight: 400;
+    background: #1b224c;
+    padding: 1rem 0.5rem;
+    margin: 0;
+  }
+  .leftBlock .nodeMenu .accordion ul {
+    padding: 0;
+  }
+  .leftBlock .nodeMenu .accordion ul li {
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+  .leftBlock .nodeMenu .accordion ul li .accordionList {
+    padding: 15px 30px 15px 20px;
+  }
+  .leftBlock .nodeMenu .accordion ul li .accordionList .accordionArrow.noItem:after {
+    display: none;
+  }
+  .leftBlock .nodeMenu .accordion ul li .accordionList + .accordionContent .content a {
+    padding-left: 2rem;
+  }
+  .leftBlock .nodeMenu .accordion ul li > a,
+  .leftBlock .nodeMenu .accordion ul li button {
+    margin: 0rem 0.5rem;
+    background: #fff;
+    color: #222;
+    margin: 0;
+    border-radius: 0rem;
+  }
+  .leftBlock .nodeMenu .accordion ul li > a:hover, .leftBlock .nodeMenu .accordion ul li > a:focus,
+  .leftBlock .nodeMenu .accordion ul li button:hover,
+  .leftBlock .nodeMenu .accordion ul li button:focus {
+    background: #9e9e9e;
+  }
+  .leftBlock .nodeMenu .accordion ul li.active > button {
+    background: #9e9e9e;
+  }
+  .leftBlock .nodeMenu .accordion .active .accordionArrow {
+    transform: rotate(45deg);
+    top: calc(50% - 7px);
+  }
+  .leftBlock .nodeMenu .accordion .accordionArrow {
+    right: 15px;
+  }
+  .leftBlock .nodeMenu .accordion .accordionArrow::after {
+    border: 2px solid #1b224c;
+    border-bottom: 0;
+    border-left: 0;
+  }
+  .leftBlock .nodeMenu .accordion .content a {
+    padding-left: 1.25rem;
+  }
+  .leftBlock .nodeMenu .accordion .accordionContent .content {
+    background: #f2f2f2;
+    padding: 0;
+  }
+  .leftBlock .nodeMenu .accordion .accordionContent .content button {
+    background: unset;
+    padding-left: 2rem;
+  }
+  .leftBlock .nodeMenu .accordion .accordionContent .content button:hover {
+    background: #ccc;
+  }
+  .leftBlock .nodeMenu .accordion .accordionContent .content button + .accordionContent .content a {
+    padding-left: 3rem;
+  }
+  .leftBlock .nodeMenu .accordion .accordionContent .content a {
+    padding-left: 2.5rem;
+  }
+  .leftBlock .nodeMenu .accordion .accordionContent .content .active button {
+    background: #ccc;
   }
   .conditional_searchbtn {
     border-radius: 0.25rem;
@@ -10169,7 +10306,7 @@ img {
     overflow-x: scroll;
   }
   .lp .accordion table ul {
-    padding-left: 2.2222222222rem;
+    padding-left: 2.5rem;
     list-style: disc;
   }
   .lp .accordion .aList {

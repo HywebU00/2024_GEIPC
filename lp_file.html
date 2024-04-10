@@ -110,7 +110,7 @@
               </ul>
             </nav>
             <!-- h2節點 -->
-            <h2 class="title">核定名單</h2>
+            <h2 class="title">節點標題</h2>
             <!-- functionPanel -->
             <div class="functionPanel">
               <!-- 文字大小 -->
@@ -156,12 +156,35 @@
             </div>
             <!-- function功能區塊 -->
             <!-- 條件查詢 start -->
-            <button type="button" class="btn conditional_searchbtn">條件查詢</button>
+            <button type="button" class="btn conditional_searchbtn">查詢</button>
             <div class="conditional_searchblock">
               <form action="">
-                <div class="flexForm formGrid flex_6_6">
+                <div class="flexForm formGrid">
                   <div class="formGrp">
-                    <label for="selectSample" class="formTitle">計畫類型</label>
+                    <label for="title" class="formTitle">標題</label>
+                    <div class="formContent">
+                      <input id="title" type="text" title="請輸入標題" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="title" class="formTitle">內文</label>
+                    <div class="formContent">
+                      <input id="title" type="text" title="請輸入內文" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <div class="formTitle">起始日期</div>
+                    <div class="formContent">
+                      <div class="datePick">
+                        <input name="" type="date" value="" class="calendar" placeholder="開始日期" title="開始日期" />
+                      </div>
+                      <div class="datePick">
+                        <input name="" type="date" value="" class="calendar" placeholder="結束日期" title="結束日期" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="selectSample" class="formTitle">下拉選單</label>
                     <div class="formContent">
                       <select id="selectSample" name="">
                         <option value="">全部</option>
@@ -175,25 +198,32 @@
                       </select>
                     </div>
                   </div>
-                  <div class="formGrp">
-                    <label for="title" class="formTitle">公司名稱</label>
-                    <div class="formContent">
-                      <input id="title" type="text" title="請輸入標題" />
+                  <div class="formGrp" role="group" aria-labelledby="fake-legend">
+                    <div for="" class="formTitle">活動地點</div>
+                    <div class="formContent" id="fake-legend">
+                      <div class="radioGrp formInline">
+                        <label> <input type="radio" name="sampleRadio5" value="" checked="" />新北市</label>
+                        <label> <input type="radio" name="sampleRadio5" title="臺北市" value="" />臺北市</label>
+                        <label> <input type="radio" name="sampleRadio5" title="臺中市" value="" />臺中市</label>
+                        <label> <input type="radio" name="sampleRadio5" title="臺南市" value="" />臺南市</label>
+                        <label> <input type="radio" name="sampleRadio5" title="高雄市" value="" />高雄市</label>
+                        <label> <input type="radio" name="sampleRadio5" title="宜蘭縣" value="" />宜蘭縣</label>
+                        <label> <input type="radio" name="sampleRadio5" title="新竹縣" value="" />新竹縣</label>
+                      </div>
                     </div>
                   </div>
-                  <div class="formGrp">
-                    <label for="title" class="formTitle">計畫名稱</label>
-                    <div class="formContent">
-                      <input id="title" type="text" title="請輸入內文" />
+                  <div class="formGrp" role="group" aria-labelledby="fake-legend">
+                    <label class="formTitle">活動地點</label>
+                    <div class="formContent" id="fake-legend">
+                      <div class="checkGrp formInline">
+                        <label> <input type="checkbox" name="" value="" title="全部" checked="" />全部</label>
+                        <label> <input type="checkbox" name="" value="" title="展覽" />展覽</label>
+                        <label> <input type="checkbox" name="" value="" title="表演與節慶" />表演與節慶</label>
+                        <label> <input type="checkbox" name="" value="" title="演講／講座／研討會" />演講／講座／研討會</label>
+                        <label> <input type="checkbox" name="" value="" title="綜合" />綜合</label>
+                      </div>
                     </div>
                   </div>
-                  <div class="formGrp">
-                    <label for="title" class="formTitle">核定年月</label>
-                    <div class="formContent">
-                      <input id="title" type="text" title="請輸入內文" />
-                    </div>
-                  </div>
-
                   <div class="btnGrp formInline">
                     <button type="button" class="btn btnSubmit">查詢</button>
                     <button type="button" class="btn btnReset">清除重填</button>
@@ -206,17 +236,12 @@
               <!-- 列表樣式 start -->
               <h3>申請資格</h3>
               <p>為建立政府資訊公開制度，便利人民共享及公平利用政府資訊，保障人民知的權利，增進人民對公共事務之瞭解、信賴及監督，並促進民主參與，特制定政 <a href="">府資訊公開法</a>。</p>
-              <ul class="cjkList">
-                <li>條約、對外關係文書、法律、緊急命令、中央法規標準法所定之命令、法規命令及地方自治法規。</li>
-                <li>政府機關為協助下級機關或屬官統一解釋法令、認定事實、及行使裁量權，而訂頒之解釋性規定及裁量基準。</li>
-                <li>政府機關之組織、職掌、地址、電話、傳真、網址及電子郵件信箱帳號。</li>
-                <li>行政指導有關文書。</li>
-                <li>施政計畫、業務統計及研究報告。</li>
-                <li>預算及決算書。</li>
-                <li>請願之處理結果及訴願之決定。</li>
-                <li>書面之公共工程及採購契約。</li>
-                <li>支付或接受之補助。</li>
-                <li>合議制機關之會議紀錄。</li>
+              <ul>
+                <li>影開兒中不們西動會味理化由子常洲國有標題</li>
+                <li>首動我行得流事個要使著獨操大</li>
+                <li>推列黃上道有畫走長市上</li>
+                <li>證會不就人推陸跑公片重</li>
+                <li>處來在山工國生即工球一，易心個長什去實用當們公有也候</li>
               </ul>
               <!-- 列表樣式 end -->
               <!-- category -->
@@ -244,48 +269,77 @@
                   </caption>
                   <thead>
                     <tr>
-                      <th>計畫類別</th>
-                      <th>公司名稱</th>
-                      <th>計畫名稱</th>
-                      <th>核定補助款(千元)</th>
-                      <th>核定自籌款(千元)</th>
-                      <th>核定總經費(千元)</th>
-                      <th>核定年月</th>
+                      <th>分類</th>
+                      <th>檔案名稱</th>
+                      <th>檔案說明</th>
+                      <th>檔案下載</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="type">前瞻技術研發計畫</td>
-                      <td>福記冷凍食品股份有限公司、神耀科技股份有限公司</td>
+                      <td class="">A+企業創新研發淬鍊計畫說明簡報</td>
                       <td>
-                        <a href="#">蛋原料品質暨儲運數位協作開發計畫</a>
+                        <a href="#">通A_計畫說明會簡報</a>
                       </td>
-                      <td class="num">25,440.5</td>
-                      <td class="num">34,560</td>
-                      <td class="num">60,000</td>
-                      <td class="date">113年1月</td>
+                      <td>A+企業創新研發淬鍊計畫說明簡報</td>
+                      <td>
+                        <ul class="fileDownload">
+                          <li>
+                            <span class="file_doc"><a href="xxxx.doc">doc</a></span>
+                            <span class="file_docx"><a href="xxx.docx">docx</a></span>
+                            <span class="file_odt"><a href="xxxx.odt">odt</a></span>
+                          </li>
+                          <li>
+                            <span class="file_xls"><a href="xxxx.xls">xls</a></span>
+                            <span class="file_xlsx"><a href="xxxx.xlsx">xlsx</a></span>
+                            <span class="file_csv"><a href="xxxx.csv">csv</a></span>
+                            <span class="file_ods"><a href="xxxx.ods">ods</a></span>
+                          </li>
+                          <li>
+                            <span class="file_ppt"><a href="xxxx.ppt">ppt</a></span>
+                            <span class="file_pptx"><a href="xxxx.pptx">pptx</a></span>
+                            <span class="file_odp"><a href="xxxx.odp">odp</a></span>
+                          </li>
+                          <li>
+                            <span class="file_pdf"><a href="xxxx.pdf">pdf</a></span>
+                            <span class="file_zip"><a href="xxxx.zip">zip</a></span>
+                            <span class="file_txt"><a href="xxxx.txt">txt</a></span>
+                            <span class="file_mov"><a href="xxxx.mov">mov</a></span>
+                            <span class="file_mp3"><a href="xxxx.mp3">mp3</a></span>
+                            <span class="file_jpg"><a href="xxxx.jpg">jpg</a></span>
+                            <span class="file_wmv"><a href="xxxx.wmv">wmv</a></span>
+                            <span class="file_mp4"><a href="xxxx.mp4">mp4</a></span>
+                          </li>
+                        </ul>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="type">前瞻技術研發計畫</td>
-                      <td>福記冷凍食品股份有限公司、神耀科技股份有限公司</td>
+                      <td>申請階段</td>
                       <td>
-                        <a href="#">高功率暨高效能GaN on QST元件與製程技術開發計畫</a>
+                        <a href="#">前瞻計畫申請表及公司基本資料表</a>
                       </td>
-                      <td class="num">25,440.5</td>
-                      <td class="num">34,560</td>
-                      <td class="num">60,000</td>
-                      <td class="date">113年1月</td>
+                      <td>申請表及公司基本資料表-申請時請提供一式2份</td>
+                      <td>
+                        <ul class="fileDownload">
+                          <li>
+                            <span class="file_doc"><a href="xxxx.doc">doc</a></span>
+                          </li>
+                        </ul>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="type">前瞻技術研發計畫</td>
-                      <td>福記冷凍食品股份有限公司、神耀科技股份有限公司</td>
+                      <td>申請階段</td>
                       <td>
-                        <a href="#">高離子通量低碳排創新海淡系統之關鍵材料技術開發計畫</a>
+                        <a href="#">A_前瞻型_構想審查簡報</a>
                       </td>
-                      <td class="num">25,440.5</td>
-                      <td class="num">34,560</td>
-                      <td class="num">60,000</td>
-                      <td class="date">113年1月</td>
+                      <td>2構想簡報格式-申請時請提供一式10份</td>
+                      <td>
+                        <ul class="fileDownload">
+                          <li>
+                            <span class="file_docx"><a href="xxx.docx">docx</a></span>
+                          </li>
+                        </ul>
+                      </td>
                     </tr>
                   </tbody>
                 </table>

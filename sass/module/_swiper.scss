@@ -32,8 +32,8 @@
 
   img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    aspect-ratio: 3/2;
+    object-fit: cover;
   }
 }
 
@@ -115,10 +115,11 @@
 
   &::before {
     content: '';
-    width: 20px;
-    height: 30px;
+    width: 57px;
+    height: 50px;
     display: block;
-    background: url('../vendor/swiper/ar.svg') center no-repeat;
+    background: url('../images/arr_l.png') center no-repeat;
+    // background: url('../vendor/swiper/ar.svg') center no-repeat;
   }
 
   &.prevSlider {
@@ -135,10 +136,6 @@
 
   &.swiperArrow-disabled {
     opacity: 0.3;
-  }
-
-  &:focus-visible {
-    outline: 2px solid red;
   }
 }
 

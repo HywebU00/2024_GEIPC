@@ -26,17 +26,17 @@ window.addEventListener('load', () => {
   });
 
   // 手風琴功能
-  accordionFunction({
-    target: '.accordion',
-    openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
-    autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
-    openSwitch: true, // 是否可開合
-    index: 0, // 預設開啟第幾個
-    info: {
-      open: '展開', // 收合時顯示
-      close: '收合', // 展開時顯示
-    },
-  });
+  // accordionFunction({
+  //   target: '.accordion',
+  //   openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
+  //   autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  //   openSwitch: true, // 是否可開合
+  //   index: 0, // 預設開啟第幾個
+  //   info: {
+  //     open: '展開', // 收合時顯示
+  //     close: '收合', // 展開時顯示
+  //   },
+  // });
 });
 // -----  基本功能開關   ---------------------------------------------------
 
@@ -290,6 +290,11 @@ window.addEventListener('load', () => {
       el: '.sliderFor .pagination',
       type: 'fraction', //顯示分頁
     },
+    navigation: {
+      nextEl: '.sliderFor .nextSlider', //下一張class，無障礙設定關係需要增加.nextSlider
+      prevEl: '.sliderFor .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
+      disabledClass: 'swiperArrow-disabled', //不可點選樣式
+    },
     lazy: true,
     thumbs: {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
@@ -319,7 +324,8 @@ window.addEventListener('load', () => {
   }
 
   // 地圖-計畫現況
-  const mapBox = document.querySelector('.mapBox g');
+  const mapBox = document.querySelector('.mapBox');
+  const mapBoxI = document.querySelectorAll('.mapBox g');
   const mapBoxEl = document.querySelectorAll('.mapBox .mapInfo .el');
   const mapBoxA = document.querySelectorAll('.mapBox svg a');
   const islandsData = document.querySelectorAll('.islands .item');
@@ -358,7 +364,6 @@ window.addEventListener('load', () => {
 
       //city
       if (cityData) {
-        console.log(cityInfoData);
         const cityOther = Array.prototype.filter.call(cityInfoData.parentNode.children, (child) => {
           return child !== cityInfoData;
         });
@@ -384,10 +389,7 @@ window.addEventListener('load', () => {
         mouseEvent(e, 'active');
       });
       item.addEventListener('mouseleave', (e) => {
-        mapBoxA.forEach((content) => content.classList.remove('active'));
-        mapBoxEl.forEach((content) => content.classList.remove('active'));
-        cityData.forEach((content) => content.classList.remove('active'));
-        islandsData.forEach((content) => content.classList.remove('active'));
+        mapBox.querySelectorAll('.active').forEach((content) => content.classList.remove('active'));
       });
     });
 
@@ -401,40 +403,37 @@ window.addEventListener('load', () => {
         mouseEvent(e, 'active');
       });
       item.addEventListener('mouseleave', (e) => {
-        mapBoxA.forEach((content) => content.classList.remove('active'));
-        mapBoxEl.forEach((content) => content.classList.remove('active'));
-        cityData.forEach((content) => content.classList.remove('active'));
-        islandsData.forEach((content) => content.classList.remove('active'));
+        mapBox.querySelectorAll('.active').forEach((content) => content.classList.remove('active'));
       });
     });
 
     // 地圖-計畫現況-縣市
     cityData.forEach((item, index) => {
       item.addEventListener('click', (e) => {
+        let checkAll = mapBox.querySelectorAll('.clickActive').length;
         index > 0 && mouseEvent(e, 'clickActive');
-        if (index === 0) {
-          mapBoxA.forEach((content) => content.classList.toggle('clickActive'));
-          mapBoxEl.forEach((content) => content.classList.toggle('clickActive'));
-          cityData.forEach((content) => content.classList.toggle('clickActive'));
-          islandsData.forEach((content) => content.classList.toggle('clickActive'));
+        if (index === 0 && checkAll <= 3) {
+          mapBoxI.forEach((content) => content.classList.add('clickActive'));
+          mapBoxEl.forEach((content) => content.classList.add('clickActive'));
+          cityData.forEach((content) => content.classList.add('clickActive'));
+          islandsData.forEach((content) => content.classList.add('clickActive'));
+        } else if (index === 0 && checkAll > 3) {
+          mapBoxI.forEach((content) => content.classList.remove('clickActive'));
+          mapBoxEl.forEach((content) => content.classList.remove('clickActive'));
+          cityData.forEach((content) => content.classList.remove('clickActive'));
+          islandsData.forEach((content) => content.classList.remove('clickActive'));
         }
       });
       item.addEventListener('mouseover', (e) => {
         index > 0 && mouseEvent(e, 'active');
       });
       item.addEventListener('mouseleave', (e) => {
-        mapBoxA.forEach((content) => content.classList.remove('active'));
-        mapBoxEl.forEach((content) => content.classList.remove('active'));
-        cityData.forEach((content) => content.classList.remove('active'));
-        islandsData.forEach((content) => content.classList.remove('active'));
+        mapBox.querySelectorAll('.active').forEach((content) => content.classList.remove('active'));
       });
     });
 
     mapBox.addEventListener('mouseleave', (e) => {
-      mapBoxA.forEach((content) => content.classList.remove('active'));
-      mapBoxEl.forEach((content) => content.classList.remove('active'));
-      cityData.forEach((content) => content.classList.remove('active'));
-      islandsData.forEach((content) => content.classList.remove('active'));
+      mapBox.querySelectorAll('.active').forEach((content) => content.classList.remove('active'));
     });
   }
 

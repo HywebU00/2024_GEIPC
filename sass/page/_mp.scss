@@ -1047,30 +1047,27 @@ section {
     svg {
       width: 100%;
 
-      a {
+      a:hover,
+      .active,
+      .clickActive,
+      a:focus-visible {
+        outline: none;
+        z-index: 9;
 
-        &:hover,
-        &.active,
-        &.clickActive,
-        &:focus-visible {
-          outline: none;
-          z-index: 9;
+        .cls1 {
+          fill: #e58787;
+        }
 
-          .cls1 {
-            fill: #e58787;
-          }
+        .cls2 {
+          fill: #70aecf;
+        }
 
-          .cls2 {
-            fill: #70aecf;
-          }
+        .cls3 {
+          fill: #e6b069;
+        }
 
-          .cls3 {
-            fill: #e6b069;
-          }
-
-          .cls4 {
-            fill: #d4c200;
-          }
+        .cls4 {
+          fill: #d4c200;
         }
       }
 
@@ -1267,6 +1264,7 @@ section {
 
         li {
           width: calc((100% - 10px * 2) / 3);
+          border-radius: 8px;
 
           &:first-child {
             width: 100%;
