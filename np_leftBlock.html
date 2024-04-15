@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HyUI kit</title>
 
-<head>
-  <meta name="robots" content="noindex" />
-  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HyUI kit</title>
+    <!-- 燈箱fancybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
 
-  <!-- 燈箱fancybox -->
-  <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
-  <!-- style css -->
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- favicon -->
-  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
-</head>
-
-<body>
-  <!-- 直接跳主內容區 -->
-  <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
-  <!-- wrapper Start -->
-  <div class="wrapper">
-    <!-- header Start -->
+  <body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
       <header class="header typeB">
         <div class="container">
           <a class="accessKey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
@@ -81,7 +80,21 @@
           <!-- menu Start -->
           <nav class="menu mainMenu" role="navigation" aria-label="About page">
             <ul>
-              <li><a href="#">關於我們</a></li>
+              <li>
+                <a href="#">關於我們</a>
+                <ul>
+                  <li><a href="#">第二層</a></li>
+                  <li>
+                    <a href="#">第二層</a>
+                    <ul>
+                      <li><a href="#">第三層</a></li>
+                      <li><a href="#">第三層</a></li>
+                      <li><a href="#">第三層</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">第二層</a></li>
+                </ul>
+              </li>
               <li><a href="#">最新消息</a></li>
               <li><a href="#">綠能資訊</a></li>
               <li><a href="#">政策資源</a></li>
@@ -98,200 +111,193 @@
           <img src="images/inbanner.jpg" alt="" />
         </div>
       </div>
-    <!-- main Start -->
-    <main id="center" class="main innerPage">
-      <!-- 內頁新增一個classname-->
-      <a class="accessKey" href="#aC" id="ac" accesskey="C" title="主要內容區">:::</a>
-      <div class="container">
+      <!-- main Start -->
+      <main id="center" class="main innerPage">
+        <!-- 內頁新增一個classname-->
+        <a class="accessKey" href="#aC" id="ac" accesskey="C" title="主要內容區">:::</a>
+        <div class="container">
+          <!-- 如果不要sticky效果，就移除stickySidebar classname -->
+          <aside class="leftBlock stickySidebar">
+            <div class="sidebar__inner">
+              <div class="nodeMenu">
+                <div class="title">計畫類型</div>
+                <div class="accordion">
+                  <ul>
+                    <li>
+                      <a href="#" class="accordionList" role="button" title=""> 前瞻技術研發計畫 </a>
+                    </li>
+                    <li>
+                      <button class="accordionList" role="button" title="">第一項說明</button>
+                      <div class="accordionContent">
+                        <div class="content">
+                          <div class="accordion">
+                            <ul>
+                              <li>
+                                <button class="accordionList" role="button" title="">第一項說明</button>
+                                <div class="accordionContent">
+                                  <div class="content">
+                                    <a href="#">連結連結連結</a>
+                                    <a href="#">連結連結連結連結</a>
+                                    <a href="#">連結連結連</a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <button class="accordionList" role="button" title="">第二項說明</button>
+                                <div class="accordionContent">
+                                  <div class="content">
+                                    <a href="#">連結</a>
+                                    <a href="#">連結</a>
+                                  </div>
+                                </div>
+                              </li>
 
-        <!-- 如果不要sticky效果，就移除stickySidebar classname -->
-        <aside class="leftBlock stickySidebar">
-          <div class="sidebar__inner">
-            <div class="nodeMenu">
-              <div class="title">計畫類型</div>
-              <div class="accordion">
-                <ul>
-                  <li>
-                    <a href="#" class="accordionList" role="button" title="">
-                      前瞻技術研發計畫
-                    </a>
-                  </li>
-                  <li>
-                    <button class="accordionList" role="button" title="">第一項說明</button>
-                    <div class="accordionContent">
-                      <div class="content">
-                        <div class="accordion">
-                          <ul>
-                            <li>
-                              <button class="accordionList" role="button" title="">第一項說明</button>
-                              <div class="accordionContent">
-                                <div class="content">
-                                  <a href="#">連結連結連結</a>
-                                  <a href="#">連結連結連結連結</a>
-                                  <a href="#">連結連結連</a>
+                              <li>
+                                <button class="accordionList" role="button" title="">第三項說明</button>
+                                <div class="accordionContent">
+                                  <div class="content">
+                                    <a href="#">連結</a>
+                                  </div>
                                 </div>
-                              </div>
-                            </li>
-                            <li>
-                              <button class="accordionList" role="button" title="">第二項說明</button>
-                              <div class="accordionContent">
-                                <div class="content">
-                                  <a href="#">連結</a>
-                                  <a href="#">連結</a>
+                              </li>
+                              <li>
+                                <button class="accordionList" role="button" title="">第四項說明</button>
+                                <div class="accordionContent">
+                                  <div class="content">
+                                    <a href="#">連結連結連結連結</a>
+                                    <a href="#">連結</a>
+                                  </div>
                                 </div>
-                              </div>
-                            </li>
-
-                            <li>
-                              <button class="accordionList" role="button" title="">第三項說明</button>
-                              <div class="accordionContent">
-                                <div class="content">
-                                  <a href="#">連結</a>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <button class="accordionList" role="button" title="">第四項說明</button>
-                              <div class="accordionContent">
-                                <div class="content">
-                                  <a href="#">連結連結連結連結</a>
-                                  <a href="#">連結</a>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
-                  </li>
-                  <li>
-                    <button class="accordionList" role="button" title="">第二項說明</button>
-                    <div class="accordionContent">
-                      <div class="content">
-                        <a href="#">連結</a>
-                        <a href="#">連結</a>
+                    </li>
+                    <li>
+                      <button class="accordionList" role="button" title="">第二項說明</button>
+                      <div class="accordionContent">
+                        <div class="content">
+                          <a href="#">連結</a>
+                          <a href="#">連結</a>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li>
-                    <button class="accordionList" role="button" title="">第三項說明</button>
-                    <div class="accordionContent">
-                      <div class="content">
-                        <a href="#">連結</a>
+                    </li>
+                    <li>
+                      <button class="accordionList" role="button" title="">第三項說明</button>
+                      <div class="accordionContent">
+                        <div class="content">
+                          <a href="#">連結</a>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li>
-                    <button class="accordionList" role="button" title="">第四項說明</button>
-                    <div class="accordionContent">
-                      <div class="content">
-                        <a href="#">連結</a>
+                    </li>
+                    <li>
+                      <button class="accordionList" role="button" title="">第四項說明</button>
+                      <div class="accordionContent">
+                        <div class="content">
+                          <a href="#">連結</a>
+                        </div>
                       </div>
-                    </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- 主要內容區 -->
+          <div class="centerBlock">
+            <!-- breadcrumb路徑 -->
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">節點</a></li>
+                <li aria-current="page">節點</li>
+              </ul>
+            </nav>
+            <!-- h2節點 -->
+            <h2 class="title">前瞻技術創業投資計畫</h2>
+            <!-- functionPanel -->
+            <div class="functionPanel">
+              <!-- function功能區塊 -->
+              <div class="function">
+                <ul>
+                  <li class="back">
+                    <a href="javascript:history.back()">回上一頁</a>
                   </li>
                 </ul>
               </div>
-
+              <!-- 社群分享 -->
+              <div class="share">
+                <ul>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </aside>
-        <!-- 主要內容區 -->
-        <div class="centerBlock">
-
-          <!-- breadcrumb路徑 -->
-          <nav aria-label="Breadcrumb" class="breadcrumb">
-            <ul>
-              <li><a href="#">首頁</a></li>
-              <li><a href="#">節點</a></li>
-              <li aria-current="page">節點</li>
-            </ul>
-          </nav>
-          <!-- h2節點 -->
-          <h2 class="title">前瞻技術創業投資計畫</h2>
-          <!-- functionPanel -->
-          <div class="functionPanel">
-            <!-- function功能區塊 -->
-            <div class="function">
+            <!-- NP Start -->
+            <section class="np">
+              <p>為鼓勵我國產業以全球思維，建構國際策略夥伴創新合作關係，參與國際（如歐盟等）研發計畫，槓桿國際創新能量，進行技術研發國際化，提升我國產業研發水準與核心競爭力，並帶動整體產業鏈發展，創造產業價值，拓展國際市場商機。</p>
+              <!-- 列表樣式 start -->
+              <h3>申請資格</h3>
+              <p>本計畫由單一企業或多家企業聯合提出申請(以下簡稱申請廠商)，申請資格為：</p>
               <ul>
-                <li class="back">
-                  <a href="javascript:history.back()">回上一頁</a>
-                </li>
+                <li>影開兒中不們西動會味理化由子常洲國有標題</li>
+                <li>首動我行得流事個要使著獨操大</li>
+                <li>推列黃上道有畫走長市上</li>
+                <li>證會不就人推陸跑公片重</li>
+                <li>處來在山工國生即工球一，易心個長什去實用當們公有也候</li>
+              </ul>
+              <!-- 列表樣式 end -->
 
-              </ul>
-            </div>
-            <!-- 社群分享 -->
-            <div class="share">
-              <ul>
-                <li>
-                  <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
-                </li>
-              </ul>
-            </div>
+              <div class="submenu">
+                <ul>
+                  <li>
+                    <a href="#">計畫簡介及一覽表</a>
+                  </li>
+                  <li>
+                    <a href="#">徵案公告個別項目</a>
+                  </li>
+                  <li>
+                    <a href="#">計畫公告</a>
+                  </li>
+                  <li>
+                    <a href="#">計畫流程</a>
+                  </li>
+                  <li>
+                    <a href="#">資料下載</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- NP End -->
           </div>
-          <p>
-            為鼓勵我國產業以全球思維，建構國際策略夥伴創新合作關係，參與國際（如歐盟等）研發計畫，槓桿國際創新能量，進行技術研發國際化，提升我國產業研發水準與核心競爭力，並帶動整體產業鏈發展，創造產業價值，拓展國際市場商機。
-          </p>
-          <!-- 列表樣式 start -->
-          <h3>申請資格</h3>
-          <p>
-            本計畫由單一企業或多家企業聯合提出申請(以下簡稱申請廠商)，申請資格為：
-          </p>
-          <ul>
-            <li>影開兒中不們西動會味理化由子常洲國有標題</li>
-            <li>首動我行得流事個要使著獨操大</li>
-            <li>推列黃上道有畫走長市上</li>
-            <li>證會不就人推陸跑公片重</li>
-            <li>處來在山工國生即工球一，易心個長什去實用當們公有也候</li>
-          </ul>
-          <!-- 列表樣式 end -->
-
-          <!-- NP Start -->
-          <section class="submenu">
-            <ul>
-              <li>
-                <a href="#">計畫簡介及一覽表</a>
-              </li>
-              <li>
-                <a href="#">徵案公告個別項目</a>
-              </li>
-              <li>
-                <a href="#">計畫公告</a>
-              </li>
-              <li>
-                <a href="#">計畫流程</a>
-              </li>
-              <li>
-                <a href="#">資料下載</a>
-              </li>
-
-            </ul>
-          </section>
-          <!-- NP End -->
         </div>
-      </div>
-    </main>
+      </main>
 
-    <!-- footer Start-->
+      <!-- footer Start-->
       <footer>
         <div class="container">
           <a class="accessKey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
@@ -317,23 +323,22 @@
           </div>
         </div>
       </footer>
-    <!-- footer End -->
-  </div>
-  <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
 
-  <!-- lazyload -->
-  <script src="vendor/lazyload/lazyload.js"></script>
-  <!-- fancybox -->
-  <script src="vendor/fancybox/fancybox.umd.js"></script>
-  <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
-  <!-- swiper -->
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
-  <!-- main js-->
-  <script src="js/main.js"></script>
-  <!-- js -->
-  <script src="js/customize.js"></script>
-  <!-- js -->
-  <script src="js/np.js"></script>
-</body>
-
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- main js-->
+    <script src="js/main.js"></script>
+    <!-- js -->
+    <script src="js/customize.js"></script>
+    <!-- js -->
+    <script src="js/np.js"></script>
+  </body>
 </html>

@@ -8664,23 +8664,22 @@ img {
       right: 28px;
     }
   }
-  .newsBox .item.hot .date::before {
+  .newsBox .item.hot .title {
+    display: flex;
+    align-items: center;
+  }
+  .newsBox .item.hot .title::before {
     content: "HOT";
-    position: absolute;
     font-weight: bold;
     color: #fff;
     font-size: 0.875rem;
     background: #f88906;
-    transform: translateY(-105%) translateX(95px);
     border-radius: 2px;
     padding: 0 5px;
-  }
-  @media screen and (max-width: 575px) {
-    .newsBox .item.hot .date::before {
-      transform: none;
-      position: relative;
-      margin-right: 20px;
-    }
+    margin: 0 20px 0 0;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .newsBox .date {
     text-align: center;
@@ -8689,7 +8688,7 @@ img {
     color: #000;
     font-weight: bold;
     font-size: 1.125rem;
-    margin-right: clamp(20px, 5%, 50px);
+    margin-right: 20px;
   }
   @media screen and (max-width: 575px) {
     .newsBox .date {
@@ -8980,6 +8979,9 @@ img {
   }
   .cardBox {
     margin-top: clamp(50px, 10%, 100px);
+  }
+  .cardBox .item .title {
+    font-size: 1.25rem;
   }
   .videoBox {
     background: none;

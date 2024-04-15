@@ -470,24 +470,21 @@ section {
     }
 
     &.hot {
-      .date {
+      .title {
+        display: flex;
+        align-items: center;
 
         &::before {
           content: 'HOT';
-          position: absolute;
           font-weight: bold;
           color: #fff;
           font-size: Rem(14);
           background: #f88906;
-          transform: translateY(-105%) translateX(95px);
           border-radius: 2px;
           padding: 0 5px;
-
-          @include screen('xsMobile') {
-            transform: none;
-            position: relative;
-            margin-right: 20px;
-          }
+          margin: 0 20px 0 0;
+          display: block;
+          width: fit-content;
         }
       }
     }
@@ -500,7 +497,7 @@ section {
     color: #000;
     font-weight: bold;
     font-size: Rem(18);
-    margin-right: clamp(20px, 5%, 50px);
+    margin-right: 20px;
 
     @include screen('xsMobile') {
       text-align: left;
@@ -726,6 +723,12 @@ section {
 
 .cardBox {
   margin-top: clamp(50px, 10%, 100px);
+
+  .item {
+    .title {
+      font-size: Rem(20);
+    }
+  }
 }
 
 .videoBox {
