@@ -72,42 +72,28 @@
         box-sizing: border-box;
         font-size: Rem(18);
 
-        &::after {
-          content: "";
-          width: 4px;
-          height: 4px;
-          display: inline-block;
-          margin-left: 0.5em;
-          vertical-align: middle;
-          border: 2px solid #666666;
-          transform: rotate(135deg);
-          border-bottom: none;
-          border-left: none;
-          margin-bottom: 0.2em;
-        }
-
         &:focus-visible {
           box-shadow: 0 0 0 2px inset red;
         }
       }
 
-      // &.hasChild {
-      //   & > a {
-      //     &:after {
-      //       content: '';
-      //       width: 4px;
-      //       height: 4px;
-      //       display: inline-block;
-      //       margin-left: 0.5em;
-      //       vertical-align: middle;
-      //       border: 2px solid lighten($colorWord, 40);
-      //       transform: rotate(135deg);
-      //       border-bottom: none;
-      //       border-left: none;
-      //       margin-bottom: 0.2em;
-      //     }
-      //   }
-      // }
+      &.hasChild {
+        & > a {
+          &:after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            display: inline-block;
+            margin-left: 0.5em;
+            vertical-align: middle;
+            border: 2px solid lighten($colorWord, 40);
+            transform: rotate(135deg);
+            border-bottom: none;
+            border-left: none;
+            margin-bottom: 0.2em;
+          }
+        }
+      }
 
       &.active,
       &:hover {

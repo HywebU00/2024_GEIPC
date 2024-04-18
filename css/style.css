@@ -4247,7 +4247,7 @@ img {
   .header.typeB h1 {
     position: absolute;
     top: 20px;
-    z-index: 50;
+    z-index: 70;
   }
   @media screen and (max-width: 767px) {
     .header.typeB h1 {
@@ -4318,21 +4318,21 @@ img {
     box-sizing: border-box;
     font-size: 1.125rem;
   }
-  .mainMenu > ul > li > a::after {
+  .mainMenu > ul > li > a:focus-visible {
+    box-shadow: 0 0 0 2px inset red;
+  }
+  .mainMenu > ul > li.hasChild > a:after {
     content: "";
     width: 4px;
     height: 4px;
     display: inline-block;
     margin-left: 0.5em;
     vertical-align: middle;
-    border: 2px solid #666666;
+    border: 2px solid #888888;
     transform: rotate(135deg);
     border-bottom: none;
     border-left: none;
     margin-bottom: 0.2em;
-  }
-  .mainMenu > ul > li > a:focus-visible {
-    box-shadow: 0 0 0 2px inset red;
   }
   .mainMenu > ul > li.active > a, .mainMenu > ul > li:hover > a {
     color: #0094e0;
@@ -8741,12 +8741,14 @@ img {
       transform: translateY(-100%);
     }
   }
-  .resourcesBox,
-  .cardBox,
-  .videoBox,
-  .adSlider,
-  .projectBox {
-    margin-top: 0;
+  @media screen and (min-width: 767px) {
+    .resourcesBox,
+    .cardBox,
+    .videoBox,
+    .adSlider,
+    .projectBox {
+      margin-top: 0;
+    }
   }
   .resourcesBox .container,
   .cardBox .container,
@@ -8800,23 +8802,45 @@ img {
     border: 2px solid red;
     z-index: 2;
   }
-  .resourcesBox .item a:focus-visible .pic,
-  .cardBox .item a:focus-visible .pic,
-  .videoBox .item a:focus-visible .pic,
-  .adSlider .item a:focus-visible .pic,
-  .projectBox .item a:focus-visible .pic {
+  .resourcesBox .item .pic,
+  .cardBox .item .pic,
+  .videoBox .item .pic,
+  .adSlider .item .pic,
+  .projectBox .item .pic {
+    overflow: hidden;
+    max-height: 380px;
     isolation: isolate;
     position: relative;
+  }
+  .resourcesBox .item .pic img,
+  .cardBox .item .pic img,
+  .videoBox .item .pic img,
+  .adSlider .item .pic img,
+  .projectBox .item .pic img {
+    width: 100% !important;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: all 1s ease;
   }
   .resourcesBox .item a,
   .cardBox .item a,
   .videoBox .item a,
   .adSlider .item a,
   .projectBox .item a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     display: flex;
     flex-direction: column;
+  }
+  .resourcesBox .item a:hover img,
+  .cardBox .item a:hover img,
+  .videoBox .item a:hover img,
+  .adSlider .item a:hover img,
+  .projectBox .item a:hover img {
+    transform: scale(1.1);
   }
   .resourcesBox .item .title,
   .cardBox .item .title,
@@ -9150,11 +9174,16 @@ img {
     margin-right: -10px;
   }
   .adSlider .item {
+    height: 100%;
     padding: 10px;
   }
   .adSlider .item a {
-    display: block;
     position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
     outline: none;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   }
