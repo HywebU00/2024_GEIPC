@@ -110,7 +110,7 @@
   }
 
   .formGrp {
-    flex: 0 0 auto;
+    // flex: 0 0 auto;
     margin: 0 0 0.5em;
 
     input {
@@ -376,10 +376,10 @@
 
   .formGrp {
     display: flex;
-    flex-grow: 1;
+    width: calc(100% - 105px);
 
     input {
-      flex-grow: 1;
+      width: calc(100% - 71px);
       margin: 0;
       margin-right: 8px;
     }

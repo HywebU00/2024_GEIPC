@@ -469,23 +469,20 @@ section {
       }
     }
 
-    &.hot {
-      .title {
-        display: flex;
-        align-items: center;
 
-        &::before {
-          content: 'HOT';
-          font-weight: bold;
-          color: #fff;
-          font-size: Rem(14);
-          background: #f88906;
-          border-radius: 2px;
-          padding: 0 5px;
-          margin: 0 20px 0 0;
-          display: block;
-          width: fit-content;
-        }
+    .tag {
+      font-weight: bold;
+      color: #fff;
+      font-size: Rem(14);
+      background: #f88906;
+      border-radius: 2px;
+      padding: 0 5px;
+      margin: 0 20px 0 0;
+      display: block;
+      width: fit-content;
+
+      &::before {
+        display: none;
       }
     }
   }
@@ -582,8 +579,9 @@ section {
     }
 
     .pic {
+      width: 100%;
       overflow: hidden;
-      max-height: 380px;
+      max-height: 310px;
       isolation: isolate;
       position: relative;
 
@@ -750,7 +748,9 @@ section {
 }
 
 .videoBox {
-  background: none;
+  &::after {
+    display: none;
+  }
 
   &::before {
     display: none;

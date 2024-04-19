@@ -351,6 +351,8 @@ window.addEventListener('load', () => {
         });
         siblingsMap.forEach((content) => content.classList.remove(classInfo));
         mainData.classList.toggle(classInfo);
+
+        islandsData.forEach((content) => content.classList.remove(classInfo)); //外島
       }
 
       //islands
@@ -360,6 +362,9 @@ window.addEventListener('load', () => {
         });
         islandsOther.forEach((content) => content.classList.remove(classInfo));
         islandsInfoData.classList.toggle(classInfo);
+
+        mapBoxI.forEach((content) => content.classList.remove(classInfo)); //本島
+        mapBoxEl.forEach((content) => content.classList.remove(classInfo)); //本島
       }
 
       //city
@@ -370,20 +375,12 @@ window.addEventListener('load', () => {
         cityOther.forEach((content) => content.classList.remove(classInfo));
         cityInfoData.classList.toggle(classInfo);
       }
-      //other
-      const other = Array.prototype.filter.call(e.target.parentNode.parentNode.children, (child) => {
-        return child !== e.target.parentNode;
-      });
-
-      other.forEach((content) => content.classList.remove(classInfo));
     }
 
     // 外島
     islandsData.forEach((item) => {
       item.addEventListener('click', (e) => {
         mouseEvent(e, 'clickActive');
-        mapBoxA.forEach((content) => content.classList.remove('clickActive'));
-        mapBoxEl.forEach((content) => content.classList.remove('clickActive'));
       });
       item.addEventListener('mouseover', (e) => {
         mouseEvent(e, 'active');
@@ -397,7 +394,6 @@ window.addEventListener('load', () => {
     mapBoxA.forEach((item) => {
       item.addEventListener('click', (e) => {
         mouseEvent(e, 'clickActive');
-        islandsData.forEach((content) => content.classList.remove('clickActive'));
       });
       item.addEventListener('mouseover', (e) => {
         mouseEvent(e, 'active');
