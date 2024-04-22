@@ -976,12 +976,31 @@ section {
         padding: 10px;
         text-align: center;
         pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // img {
+        //   height: 100%;
+        //   object-fit: contain;
+        // }
+
+        svg {
+          max-width: 100%;
+          max-height: 100%;
+          pointer-events: none;
+        }
+
+        .cls5 {
+          fill: #ded6e4;
+          stroke: #ccc;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-width: 5px;
+        }
       }
 
-      img {
-        height: 100%;
-        object-fit: contain;
-      }
+
 
       &.clickActive,
       &.active,
@@ -990,8 +1009,13 @@ section {
           display: block;
         }
 
-        img {
-          filter: saturate(400%) brightness(90%);
+        // img {
+        //   filter: saturate(400%) brightness(90%);
+        // }
+        .pic {
+          .cls5 {
+            fill: #c28deb;
+          }
         }
       }
     }
@@ -1015,8 +1039,14 @@ section {
           display: block;
         }
 
-        img {
-          filter: saturate(400%) brightness(90%);
+        // img {
+        //   filter: saturate(400%) brightness(90%);
+        // }
+
+        .pic {
+          .cls5 {
+            fill: #a87bca;
+          }
         }
       }
 
