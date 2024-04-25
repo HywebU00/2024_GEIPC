@@ -59,9 +59,10 @@
 
     // 第一層選單樣式
     & > li {
-      // flex: 0 1 calc(100% / 6);
+      flex: 0 1 150px;
 
       & > a {
+        text-align: center;
         display: block;
         padding: 0 1em;
         min-height: 2.5em;
@@ -129,7 +130,7 @@
         z-index: 90;
         position: absolute;
         top: auto;
-        left: 0;
+        left: 0%;
         opacity: 0;
         list-style: none;
         text-align: left;
@@ -164,10 +165,10 @@
           & > a {
             padding-right: 2em;
 
-            &:hover,
-            &:focus-visible {
-              background: $colorPrimary;
-            }
+            // &:hover,
+            // &:focus-visible {
+            //   background: $colorPrimary;
+            // }
 
             &:after {
               content: '';

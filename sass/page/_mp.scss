@@ -786,6 +786,10 @@ section {
     }
   }
 
+  .content {
+    flex-grow: 1;
+  }
+
   .listBox {
     margin-bottom: 20px;
     display: flex;

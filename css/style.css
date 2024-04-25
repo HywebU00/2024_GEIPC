@@ -3784,10 +3784,6 @@ img {
     font-size: 0.875rem;
     box-sizing: border-box;
   }
-  .category a:before {
-    content: "#";
-    margin-right: 0.25em;
-  }
   .category a:hover, .category a:focus, .category a.active {
     color: #fff;
     background: #00a4f9;
@@ -4310,7 +4306,11 @@ img {
     justify-content: center;
     flex-wrap: wrap;
   }
+  .mainMenu > ul > li {
+    flex: 0 1 150px;
+  }
   .mainMenu > ul > li > a {
+    text-align: center;
     display: block;
     padding: 0 1em;
     min-height: 2.5em;
@@ -4362,7 +4362,7 @@ img {
     z-index: 90;
     position: absolute;
     top: auto;
-    left: 0;
+    left: 0%;
     opacity: 0;
     list-style: none;
     text-align: left;
@@ -4386,9 +4386,6 @@ img {
   }
   .mainMenu ul li ul li.hasChild > a {
     padding-right: 2em;
-  }
-  .mainMenu ul li ul li.hasChild > a:hover, .mainMenu ul li ul li.hasChild > a:focus-visible {
-    background: #1b224c;
   }
   .mainMenu ul li ul li.hasChild > a:after {
     content: "";
@@ -4834,7 +4831,7 @@ img {
     border-top: 1px solid #ddd;
   }
   .formGrid .formGrp {
-    border-bottom: 1px dashed #ddd;
+    border-bottom: 1px solid #ddd;
     padding: 0.5em 0;
   }
   .flexForm {
@@ -6422,14 +6419,12 @@ img {
     margin: 0;
     padding: 1em 0;
     list-style-type: none;
+    gap: 10px;
   }
   .submenu li {
     flex: 1 1 48%;
-    margin-bottom: 10px;
     border-radius: 5px;
-  }
-  .submenu li:nth-child(odd) {
-    margin-right: 10px;
+    counter-increment: my-counter;
   }
   @media screen and (max-width: 767px) {
     .submenu li {
@@ -6457,6 +6452,14 @@ img {
   }
   .submenu li a:focus-visible {
     outline: red 2px solid;
+  }
+  .submenu li a::before {
+    content: counter(my-counter) "";
+    position: absolute;
+    left: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d0d0d0;
   }
   .submenu li a .num {
     position: absolute;
@@ -6748,7 +6751,7 @@ img {
     text-align: center;
     line-height: 32px;
     border-radius: 50%;
-    background: #f1f1f1;
+    background: #fff;
     text-indent: -9999px;
     position: relative;
   }
@@ -6822,7 +6825,7 @@ img {
   }
   .functionPanel .share .shareButton {
     display: block;
-    background: #f1f1f1;
+    background: #fff;
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -9026,6 +9029,9 @@ img {
       display: none;
     }
   }
+  .statusBox .content {
+    flex-grow: 1;
+  }
   .statusBox .listBox {
     margin-bottom: 20px;
     display: flex;
@@ -10142,13 +10148,14 @@ img {
     padding-bottom: 0;
   }
   .leftBlock .accordion ul li a {
+    font-size: 1.125rem;
     display: block;
     padding: 15px 30px 15px 20px;
     color: #222;
-    font-weight: bold;
+    font-weight: normal;
   }
   .leftBlock .accordion ul li a.active, .leftBlock .accordion ul li a:hover {
-    background: #9e9e9e;
+    background: #e8e8e8;
   }
   .leftBlock .accordion ul li ul {
     display: none;
@@ -10193,7 +10200,6 @@ img {
   }
   .conditional_searchblock {
     margin-top: 0.5rem;
-    padding: 1rem;
     border-radius: 0.5rem;
     display: none;
   }
@@ -10202,6 +10208,9 @@ img {
   }
   .conditional_searchblock .formGrid {
     border-top: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0;
   }
   .conditional_searchblock .flex_6_6 {
     display: flex;

@@ -38,7 +38,7 @@
 .conditional_searchblock {
   margin-top: 0.5rem;
 
-  padding: 1rem;
+  // padding: 1rem;
   border-radius: 0.5rem;
   display: none;
 
@@ -48,6 +48,9 @@
 
   .formGrid {
     border-top: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0;
   }
 
   .flex_6_6 {
