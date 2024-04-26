@@ -3778,10 +3778,10 @@ img {
   }
   .category a {
     border: 1px solid #aaa;
+    font-size: 1.125rem;
     padding: 0.25em 0.75em;
     display: block;
     color: #333;
-    font-size: 0.875rem;
     box-sizing: border-box;
   }
   .category a:hover, .category a:focus, .category a.active {
