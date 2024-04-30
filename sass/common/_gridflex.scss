@@ -7,7 +7,6 @@
   display: flex;
   flex-flow: row wrap;
   // 預設均分
-  justify-content: space-between;
 }
 
 @mixin flexSet {
@@ -16,6 +15,7 @@
   // 預設均分
   justify-content: space-between;
 }
+
 $mGutter: 4px;
 ////////////////////////////////////////////////////
 ////////////////// 均分 equal         //////////////
@@ -29,7 +29,7 @@ $mGutter: 4px;
   flex-basis: calc(100% / #{$col} - #{$mGutter});
   max-width: calc(100% / #{$col} - #{$mGutter});
 
-  @if $col == 2 {
+  @if $col ==2 {
     &:last-child {
       @for $i from 1 through 12 {
         &:nth-child(12n -#{$i}) {
@@ -37,16 +37,21 @@ $mGutter: 4px;
         }
       }
     }
-  } @else if $col == 1 {
+  }
+
+  @else if $col ==1 {
     &:last-child {
       margin-right: 0;
     }
-  } @else {
+  }
+
+  @else {
     @for $i from 1 through ($col - 1) {
       &:last-child {
         &:nth-child(#{$col}n) {
           margin-right: 0;
         }
+
         &:nth-child(#{$col}n - #{$i}) {
           margin-right: calc((100% / #{$col} - #{$mGutter}) *#{$i} + (#{$mGutter}*#{$col}) *#{$i} / (#{$col} - 1));
         }
@@ -54,6 +59,7 @@ $mGutter: 4px;
     }
   }
 }
+
 /////////////////////// step 1、父層啟動 flex
 .demo {
   .flexSet {
@@ -62,6 +68,7 @@ $mGutter: 4px;
       color: #fff;
     }
   }
+
   .flexEqual_3,
   .flexEqual-5,
   .flexEqual_7,
@@ -74,6 +81,7 @@ $mGutter: 4px;
     }
   }
 }
+
 .flexSet {
   // 啟動flex
   // 位置：sass/sass/common/mixins/_extend.scss
@@ -84,11 +92,13 @@ $mGutter: 4px;
     // background: #485b8a;
     // color: #fff;
     margin: 4px 0;
+
     p {
       color: rgba(255, 255, 255, 0.5);
     }
   }
 }
+
 // 極小尺寸
 // $screenXs-flex: 320px !default;
 // 預設情況：最多4欄
@@ -146,6 +156,7 @@ $mGutter: 4px;
   flex-basis: calc(100% / 12 * #{$col} - #{$mGutter});
   max-width: calc(100% / 12 * #{$col} - #{$mGutter});
 }
+
 // $screenXs-flex: 320px !default;
 @mixin flexXs($col, $mGutter) {
   @media (min-width: $screenXs-flex) {
@@ -197,18 +208,21 @@ $mGutter: 4px;
       @include flexLgEqual(2, $mGutter);
       @include gutter();
     }
+
     .thumbnail {
       margin-bottom: 30px;
       @include flexXsEqual(1, 0px);
       @include flexSmEqual(2, $mGutter);
       @include flexMdEqual(2, $mGutter);
       @include flexLgEqual(2, $mGutter);
+
       @include screen('mobile') {
         justify-content: center;
       }
     }
   }
 }
+
 .flexEqual_3 {
   .flexSet {
     .col {
@@ -218,18 +232,21 @@ $mGutter: 4px;
       @include flexLgEqual(3, $mGutter);
       @include gutter();
     }
+
     .thumbnail {
       margin-bottom: 30px;
       @include flexXsEqual(1, 0px);
       @include flexSmEqual(2, $mGutter);
       @include flexMdEqual(3, $mGutter);
       @include flexLgEqual(3, $mGutter);
+
       @include screen('mobile') {
         justify-content: center;
       }
     }
   }
 }
+
 .flexEqual_4 {
   .flexSet {
     .col {
@@ -239,18 +256,21 @@ $mGutter: 4px;
       @include flexLgEqual(4, $mGutter);
       @include gutter();
     }
+
     .thumbnail {
       margin-bottom: 30px;
       @include flexXsEqual(1, 0px);
       @include flexSmEqual(2, $mGutter);
       @include flexMdEqual(4, $mGutter);
       @include flexLgEqual(4, $mGutter);
+
       @include screen('mobile') {
         justify-content: center;
       }
     }
   }
 }
+
 .flexEqual_5 {
   .flexSet {
     .col {
@@ -260,18 +280,21 @@ $mGutter: 4px;
       @include flexLgEqual(5, $mGutter);
       @include gutter();
     }
+
     .thumbnail {
       margin-bottom: 30px;
       @include flexXsEqual(1, 0px);
       @include flexSmEqual(2, $mGutter);
       @include flexMdEqual(4, $mGutter);
       @include flexLgEqual(5, $mGutter);
+
       @include screen('mobile') {
         justify-content: center;
       }
     }
   }
 }
+
 // .flexEqual-6 {
 //     .flexSet {
 //         .col {
@@ -362,6 +385,7 @@ $mGutter: 4px;
     max-width: 100%;
   }
 }
+
 // 多欄 = 12
 .flex_3_6_3 {
   .col {
@@ -396,6 +420,7 @@ $mGutter: 4px;
     }
   }
 }
+
 .flex_4_8 {
   .col {
     @include flexXs(12, 0px);
@@ -417,6 +442,7 @@ $mGutter: 4px;
 .mixEqual_2 {
   .flexSet {
     @extend %flexSet;
+
     .col {
       @include flexXsEqual(1, 0px);
       @include flexSmEqual(2, $mGutter);
@@ -433,6 +459,7 @@ $mGutter: 4px;
 
   .inner_4_8 {
     @extend %flexSet;
+
     div {
       @include flexXs(12, 0px);
       @include flexSm(4, $mGutter);

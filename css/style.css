@@ -565,7 +565,6 @@ img {
   .mixEqual_2 .inner_4_8, .mixEqual_2 .flexSet, .flexSet {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
   }
   .demo .flexSet .col {
     background: #485b8a;
@@ -6380,6 +6379,7 @@ img {
   }
   .lp .list > ul > li > a .num,
   .lp .list ol > li > a .num {
+    white-space: nowrap;
     width: 1.5em;
     text-align: right;
     position: absolute;
