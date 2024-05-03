@@ -80,12 +80,13 @@
         border-radius: 0;
         display: block;
         text-align: left;
-        background-color: #00a4f9;
+        background-color: #fff;
         border-radius: 0.25em;
-        color: #fff;
+        color: #222;
         text-decoration: none;
         padding: 16px 50px 16px 20px;
         position: relative;
+        border-left: 5px solid $colorPrimary;
       }
 
       &.active .accordionArrow {
@@ -119,7 +120,7 @@
 
     &:after {
       content: '';
-      border: 2px solid #fff;
+      border: 2px solid $colorPrimary;
       border-top: none;
       border-left: none;
       display: block;

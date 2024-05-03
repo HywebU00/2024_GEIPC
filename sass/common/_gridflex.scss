@@ -45,19 +45,19 @@ $mGutter: 4px;
     }
   }
 
-  @else {
-    @for $i from 1 through ($col - 1) {
-      &:last-child {
-        &:nth-child(#{$col}n) {
-          margin-right: 0;
-        }
+  // @else {
+  //   @for $i from 1 through ($col - 1) {
+  //     &:last-child {
+  //       &:nth-child(#{$col}n) {
+  //         margin-right: 0;
+  //       }
 
-        &:nth-child(#{$col}n - #{$i}) {
-          margin-right: calc((100% / #{$col} - #{$mGutter}) *#{$i} + (#{$mGutter}*#{$col}) *#{$i} / (#{$col} - 1));
-        }
-      }
-    }
-  }
+  //       &:nth-child(#{$col}n - #{$i}) {
+  //         margin-right: calc((100% / #{$col} - #{$mGutter}) *#{$i} + (#{$mGutter}*#{$col}) *#{$i} / (#{$col} - 1));
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 /////////////////////// step 1、父層啟動 flex

@@ -126,8 +126,11 @@
   }
 
   .videoList {
+    padding: 0;
+
     .flexSet {
       justify-content: flex-start;
+      gap: 20px;
     }
 
     .title {
@@ -153,6 +156,7 @@
           height: 100%;
           background-size: contain;
           background-position: center center;
+          -webkit-transition: all 0.3s;
           transition: all 0.3s;
           opacity: 1;
         }
@@ -176,23 +180,18 @@
   }
 
   .thumbnail {
-    flex-basis: calc(100% / 4 - 12px);
-    max-width: calc(100% / 4 - 12px);
-    margin: 12px 6px;
+    flex-basis: calc((100% - 20px * 3)/ 4);
 
     @include screen('tablet') {
-      flex-basis: calc(100% / 3 - 12px);
-      max-width: calc(100% / 3 - 12px);
+      flex-basis: calc((100% - 20px * 2)/ 3);
     }
 
     @include screen('mobile') {
-      flex-basis: calc(100% / 2 - 12px);
-      max-width: calc(100% / 2 - 12px);
+      flex-basis: calc((100% - 20px * 1)/ 2);
     }
 
     @include screen('xsMobile') {
-      flex-basis: calc(100% - 12px);
-      max-width: calc(100% - 12px);
+      flex-basis: calc((100% - 20px * 0)/ 4);
     }
   }
 
