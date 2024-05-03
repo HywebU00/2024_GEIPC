@@ -281,8 +281,13 @@ window.addEventListener('load', () => {
   });
 
   const sliderFor = new Swiper('.sliderFor .swiper', {
-    slidesPerView: 1, //顯示張數
-    effect: 'fade', //淡入
+    slidesPerView: 1.2, //顯示張數
+    // slidesPerView: 'auto',
+    // effect: 'fade', //淡入
+    loopAdditionalSlides: 3,
+    autoplay: true,
+    // loop: true,
+    centeredSlides: true,
     fadeEffect: {
       crossFade: true, //上一張淡出，false上一張不淡出，下一張疊在上方
     },

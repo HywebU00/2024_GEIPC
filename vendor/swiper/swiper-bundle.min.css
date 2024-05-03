@@ -458,9 +458,9 @@ button.swiper-pagination-bullet {
   left: 0;
   top: 0;
 }
-.swiper-pagination-lock {
+/* .swiper-pagination-lock {
   display: none;
-}
+} */
 .swiper-scrollbar {
   border-radius: var(--swiper-scrollbar-border-radius, 10px);
   position: relative;
