@@ -51,7 +51,7 @@ body {
   margin: 0 auto;
   max-width: $containerMax; //請看_variable.scss
   position: relative;
-  @include containerFixed;
+  // @include containerFixed;
 }
 
 .main {

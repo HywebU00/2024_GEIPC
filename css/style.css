@@ -7275,10 +7275,6 @@ img {
     margin: 0 auto;
     max-width: 1200px;
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   .main {
     position: relative;
@@ -10097,6 +10093,9 @@ img {
     transition: all 0.3s;
     opacity: 0;
   }
+  .lp .flexSet {
+    gap: 20px;
+  }
   .lp .thumbnail {
     flex-basis: calc((100% - 60px) / 4);
   }
@@ -10112,7 +10111,7 @@ img {
   }
   @media screen and (max-width: 575px) {
     .lp .thumbnail {
-      flex-basis: calc((100% - 0px) / 4);
+      flex-basis: 100%;
     }
   }
   .lp .accordion .accordionTable {
