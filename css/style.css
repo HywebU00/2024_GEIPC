@@ -8414,40 +8414,6 @@ img {
     color: #01abd9;
     cursor: pointer;
   }
-  .newsBox .item a::before {
-    content: "";
-    width: 18px;
-    height: 2px;
-    display: block;
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #000;
-  }
-  @media screen and (max-width: 575px) {
-    .newsBox .item a::before {
-      top: 74px;
-      right: 20px;
-    }
-  }
-  .newsBox .item a::after {
-    content: "";
-    height: 18px;
-    width: 2px;
-    display: block;
-    position: absolute;
-    right: 48px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #000;
-  }
-  @media screen and (max-width: 575px) {
-    .newsBox .item a::after {
-      top: 74px;
-      right: 28px;
-    }
-  }
   .newsBox .item .tag {
     font-weight: bold;
     color: #fff;
@@ -8578,7 +8544,7 @@ img {
   .projectBox .item .pic {
     width: 100%;
     overflow: hidden;
-    max-height: 310px;
+    aspect-ratio: 1;
     isolation: isolate;
     position: relative;
   }
@@ -8589,8 +8555,8 @@ img {
   .projectBox .item .pic img {
     width: 100% !important;
     height: 100% !important;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
     transition: all 1s ease;
   }
   .resourcesBox .item a,
@@ -8732,6 +8698,14 @@ img {
       transform: translateX(-50%);
     }
   }
+  .resourcesBox .item .pic {
+    max-height: 310px;
+    aspect-ratio: unset;
+  }
+  .resourcesBox .item .pic img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .cardBox,
   .videoBox,
   .adSlider {
@@ -8852,40 +8826,6 @@ img {
   .statusBox .item a:hover .title, .statusBox .item a:focus-visible .title {
     color: #01abd9;
     cursor: pointer;
-  }
-  .statusBox .item a::before {
-    content: "";
-    width: 18px;
-    height: 2px;
-    display: block;
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #000;
-  }
-  @media screen and (max-width: 575px) {
-    .statusBox .item a::before {
-      top: 74px;
-      right: 20px;
-    }
-  }
-  .statusBox .item a::after {
-    content: "";
-    height: 18px;
-    width: 2px;
-    display: block;
-    position: absolute;
-    right: 48px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #000;
-  }
-  @media screen and (max-width: 575px) {
-    .statusBox .item a::after {
-      top: 74px;
-      right: 28px;
-    }
   }
   .statusBox .date {
     text-align: center;
@@ -10113,6 +10053,15 @@ img {
     .lp .thumbnail {
       flex-basis: 100%;
     }
+  }
+  .lp .thumbnail .imgContainer {
+    aspect-ratio: 1;
+  }
+  .lp .thumbnail .imgContainer img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .lp .accordion .accordionTable {
     overflow-x: scroll;

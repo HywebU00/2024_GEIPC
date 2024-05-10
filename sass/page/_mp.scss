@@ -434,39 +434,39 @@ section {
         }
       }
 
-      &::before {
-        content: '';
-        width: 18px;
-        height: 2px;
-        display: block;
-        position: absolute;
-        right: 40px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #000;
+      // &::before {
+      //   content: '';
+      //   width: 18px;
+      //   height: 2px;
+      //   display: block;
+      //   position: absolute;
+      //   right: 40px;
+      //   top: 50%;
+      //   transform: translateY(-50%);
+      //   background: #000;
 
-        @include screen('xsMobile') {
-          top: 74px;
-          right: 20px;
-        }
-      }
+      //   @include screen('xsMobile') {
+      //     top: 74px;
+      //     right: 20px;
+      //   }
+      // }
 
-      &::after {
-        content: '';
-        height: 18px;
-        width: 2px;
-        display: block;
-        position: absolute;
-        right: 48px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #000;
+      // &::after {
+      //   content: '';
+      //   height: 18px;
+      //   width: 2px;
+      //   display: block;
+      //   position: absolute;
+      //   right: 48px;
+      //   top: 50%;
+      //   transform: translateY(-50%);
+      //   background: #000;
 
-        @include screen('xsMobile') {
-          top: 74px;
-          right: 28px;
-        }
-      }
+      //   @include screen('xsMobile') {
+      //     top: 74px;
+      //     right: 28px;
+      //   }
+      // }
     }
 
 
@@ -581,14 +581,15 @@ section {
     .pic {
       width: 100%;
       overflow: hidden;
-      max-height: 310px;
+      // max-height: 310px;
+      aspect-ratio: 1;
       isolation: isolate;
       position: relative;
 
       img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: cover;
+        object-fit: contain;
         transition: all 1s ease;
       }
     }
@@ -688,6 +689,16 @@ section {
   }
 }
 
+.resourcesBox {
+  .item .pic {
+    max-height: 310px;
+    aspect-ratio: unset;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
 
 .cardBox,
 .videoBox,
@@ -823,39 +834,39 @@ section {
         }
       }
 
-      &::before {
-        content: '';
-        width: 18px;
-        height: 2px;
-        display: block;
-        position: absolute;
-        right: 40px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #000;
+      // &::before {
+      //   content: '';
+      //   width: 18px;
+      //   height: 2px;
+      //   display: block;
+      //   position: absolute;
+      //   right: 40px;
+      //   top: 50%;
+      //   transform: translateY(-50%);
+      //   background: #000;
 
-        @include screen('xsMobile') {
-          top: 74px;
-          right: 20px;
-        }
-      }
+      //   @include screen('xsMobile') {
+      //     top: 74px;
+      //     right: 20px;
+      //   }
+      // }
 
-      &::after {
-        content: '';
-        height: 18px;
-        width: 2px;
-        display: block;
-        position: absolute;
-        right: 48px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #000;
+      // &::after {
+      //   content: '';
+      //   height: 18px;
+      //   width: 2px;
+      //   display: block;
+      //   position: absolute;
+      //   right: 48px;
+      //   top: 50%;
+      //   transform: translateY(-50%);
+      //   background: #000;
 
-        @include screen('xsMobile') {
-          top: 74px;
-          right: 28px;
-        }
-      }
+      //   @include screen('xsMobile') {
+      //     top: 74px;
+      //     right: 28px;
+      //   }
+      // }
     }
   }
 
