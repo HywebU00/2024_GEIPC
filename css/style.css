@@ -8698,10 +8698,12 @@ img {
       transform: translateX(-50%);
     }
   }
+  .videoBox .item .pic,
   .resourcesBox .item .pic {
     max-height: 310px;
     aspect-ratio: unset;
   }
+  .videoBox .item .pic img,
   .resourcesBox .item .pic img {
     -o-object-fit: cover;
        object-fit: cover;
