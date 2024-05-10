@@ -10036,6 +10036,15 @@ img {
   .lp .flexSet {
     gap: 20px;
   }
+  .lp .cardList .imgContainer {
+    aspect-ratio: 1;
+  }
+  .lp .cardList .imgContainer img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
   .lp .thumbnail {
     flex-basis: calc((100% - 60px) / 4);
   }
@@ -10053,15 +10062,6 @@ img {
     .lp .thumbnail {
       flex-basis: 100%;
     }
-  }
-  .lp .thumbnail .imgContainer {
-    aspect-ratio: 1;
-  }
-  .lp .thumbnail .imgContainer img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
   .lp .accordion .accordionTable {
     overflow-x: scroll;
