@@ -8901,9 +8901,6 @@ img {
     outline: none;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   }
-  .adSlider .control {
-    padding-bottom: 0;
-  }
   .mapBox {
     max-width: 1000px;
     margin: 0 auto;
