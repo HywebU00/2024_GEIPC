@@ -8877,11 +8877,25 @@ img {
   .adSlider {
     background: none;
     margin-top: clamp(30px, 10%, 100px);
+    padding-left: clamp(20px, 8%, 80px);
+    padding-right: clamp(20px, 8%, 80px);
     padding-bottom: 5px;
     overflow: hidden;
   }
   .adSlider::after {
     background: none;
+  }
+  .adSlider .col {
+    max-width: 1140px;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .adSlider .control {
+    padding: clamp(20px, 5%, 40px) 10px clamp(20px, 5%, 50px);
+  }
+  .adSlider .more {
+    margin: 0 10px 0 auto;
   }
   .adSlider .container {
     margin-left: -10px;

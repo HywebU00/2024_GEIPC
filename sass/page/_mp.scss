@@ -922,11 +922,28 @@ section {
 .adSlider {
   background: none;
   margin-top: clamp(30px, 10%, 100px);
+  padding-left: clamp(20px, 8%, 80px);
+  padding-right: clamp(20px, 8%, 80px);
   padding-bottom: 5px;
   overflow: hidden;
 
   &::after {
     background: none;
+  }
+
+  .col {
+    max-width: 1140px;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .control {
+    padding: clamp(20px, 5%, 40px) 10px clamp(20px, 5%, 50px);
+  }
+
+  .more {
+    margin: 0 10px 0 auto;
   }
 
   .container {
