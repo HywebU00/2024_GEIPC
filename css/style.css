@@ -8273,10 +8273,18 @@ img {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 767px) {
+    .topKv .btnBox {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
   .topKv .btnBox button {
     background: rgba(254, 254, 249, 0.9);
     min-width: 263px;
+    margin: 0;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     border: none !important;
   }

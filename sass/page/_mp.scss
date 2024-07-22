@@ -217,10 +217,17 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 0 20px;
+
+    @include screen('mobile') {
+      flex-direction: column;
+      gap: 10px;
+    }
 
     button {
       background: rgba(#fefef9, 0.9);
       min-width: 263px;
+      margin: 0;
       box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
       border: none !important;
 
