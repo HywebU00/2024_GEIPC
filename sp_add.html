@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>總統創新獎</title>
+    <title>HyUI kit</title>
 
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css" />
@@ -96,117 +96,168 @@
         </div>
       </div>
       <!-- main Start -->
-      <main id="center" class="main innerPage">
+      <main id="center" class="main innerPage memberPage">
         <!-- 內頁新增一個classname-->
         <a class="accessKey" href="#aC" id="ac" accesskey="C" title="主要內容區">:::</a>
         <div class="container">
+          <aside class="leftBlock memberLeftBlock">
+            <div class="sidebar__inner">
+              <div class="nodeMenu">
+                <div class="title"><a href="javascript:;" class="handle">開啟</a>無人載具科技創新實驗計畫通報系統</div>
+                <div class="accordion">
+                  <div class="user">
+                    <i class="i_man_dark"></i>
+                    <b>賴怡儒</b>，您好！
+                  </div>
+                  <ul>
+                    <li><a href="uvtep_3-1每月通報列表.html" role="button" title="">每月通報</a></li>
+                    <li><a href="uvtep_4-1事故通報列表.html" role="button" title="">事故通報</a></li>
+                    <li>
+                      <a href="uvtep_2修改密碼.html" role="button" title="">修改密碼</a>
+                    </li>
+                    <li>
+                      <a href="uvtep_1-1登入系統.html" role="button" title="">登出</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </aside>
+
           <!-- 主要內容區 -->
           <div class="centerBlock">
+            <!-- breadcrumb路徑 -->
             <nav aria-label="Breadcrumb" class="breadcrumb">
               <ul>
                 <li><a href="#">首頁</a></li>
-                <li><a href="#">節點</a></li>
-                <li aria-current="page">節點</li>
+                <li aria-current="page">無人載具科技創新實驗計畫通報系統</li>
               </ul>
             </nav>
             <!-- h2節點 -->
-            <h2 class="title">113年度3月份計畫管理及會計作業說明會</h2>
-            <ol class="progress">
-              <li class="complete" data-step="1">個資聲明</li>
-              <li class="complete" data-step="2">Email驗證</li>
-              <li class="active" data-step="3">報名資料</li>
-              <!-- progress__last -->
-              <li data-step="4">預覽確認</li>
-              <li data-step="5">完成報名</li>
-            </ol>
+            <h2 class="title">新增/修改每月通報紀錄</h2>
+
             <!-- APPLY Start -->
-            <section class="apply">
-              <div class="note">註：<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr> 欄位，不能為空白。</div>
-              <div class="flexForm formGrid">
+            <section class="notification">
+              <div class="topNotice"><span>*</span> 欄位，不能為空白。</div>
+
+              <div class="flexForm formGrid formBox">
                 <div class="formCard">
                   <div class="formGrp">
-                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
-                    <label for="username" class="formTitle" aria-required="true">公司名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                    <div class="formContent">
-                      <input type="text" id="username" title="請輸入帳號" />
-                    </div>
+                    <div class="formTitle">計畫名稱</div>
+                    <div class="formContent">淡海智駕電動巴士環線多車服務測試運行計畫</div>
                   </div>
+
                   <div class="formGrp">
-                    <label for="" class="formTitle" aria-required="true">統一編號 </label>
-                    <div class="formContent">
-                      <input name="" id="" type="text" title="" />
-                    </div>
-                  </div>
-                  <div class="formGrp">
-                    <label for="" class="formTitle" aria-required="true">資本額(萬元) </label>
-                    <div class="formContent">
-                      <input name="" id="" type="text" title="" />
-                    </div>
-                  </div>
-                  <div class="formGrp">
-                    <label for="" class="formTitle" aria-required="true">營業額(萬元)</label>
-                    <div class="formContent">
-                      <input name="" id="" type="text" title="" />
-                    </div>
-                  </div>
-                  <div class="formGrp">
-                    <label for="" class="formTitle" aria-required="true">員工人數</label>
-                    <div class="formContent">
-                      <input name="" id="" type="text" title="" />
-                    </div>
-                  </div>
-                  <div class="formGrp">
-                    <div class="formTitle">公司地址<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                    <div class="formContent formCol_2_10">
+                    <div class="formTitle">通報月份<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
+                    <div class="formContent formCol_6_6">
                       <select name="" id="">
-                        <option value="">台北市</option>
-                        <option value="">新北市</option>
-                        <option value="">桃園市</option>
-                        <option value="">新竹市</option>
-                        <option value="">...</option>
+                        <option value="">年份</option>
+                        <option value="">2024年</option>
+                        <option value="">2025年</option>
                       </select>
-                      <input name="username" type="text" title="請輸入" />
+                      <select name="" id="">
+                        <option value="">月份</option>
+                        <option value="">1月</option>
+                        <option value="">2月</option>
+                        <option value="">3月</option>
+                        <option value="">4月</option>
+                        <option value="">5月</option>
+                        <option value="">6月</option>
+                        <option value="">7月</option>
+                        <option value="">8月</option>
+                        <option value="">9月</option>
+                        <option value="">10月</option>
+                        <option value="">11月</option>
+                        <option value="">12月</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="formGrp" role="group" aria-labelledby="fake-legend">
-                    <div for="" class="formTitle">企業規模<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                    <div class="formContent" id="fake-legend">
-                      <div class="radioGrp formInline">
-                        <label> <input type="radio" name="sampleRadio6" value="" checked="" />中小企業</label>
-                        <label> <input type="radio" name="sampleRadio6" title="" value="" />大型企業</label>
-                        <label> <input type="radio" name="sampleRadio6" title="" value="" />法人</label>
-                        <label> <input type="radio" name="sampleRadio6" title="" value="" />其他</label>
+
+                  <div class="formGrp">
+                    <label for="username" class="formTitle" aria-required="true">累計發車趟次<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <input type="text" id="username" title="" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="" class="formTitle" aria-required="true">累計自駕公里數<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <input name="" id="" type="text" title="" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="" class="formTitle" aria-required="true">人工介入次數<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <input name="" id="" type="text" title="" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="" class="formTitle" aria-required="true">累計載客班次<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <input name="" id="" type="text" title="" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="" class="formTitle" aria-required="true">累計載客人次<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <input name="" id="" type="text" title="" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="" class="formTitle" aria-required="true">累計載客公里數<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <input name="" id="" type="text" title="" />
+                    </div>
+                  </div>
+
+                  <div class="formGrp">
+                    <label for="" class="formTitle" aria-required="true">介入原因</label>
+                    <div class="formContent">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="" class="formTitle" aria-required="true">處理情形</label>
+                    <div class="formContent">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="" class="formTitle" aria-required="true">檢討與改進</label>
+                    <div class="formContent">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label class="formTitle" for="">附件上傳</label>
+                    <div class="formContent formInline">
+                      <div class="formGrp">
+                        <input class="upload_file" readonly title="檔案名稱1" type="text" />
+                        <button class="btn btn-reset btnSm" type="button">清除檔案</button>
+                        <button class="btn btnOrange btnSm" type="button">選擇檔案</button>
                       </div>
+                      <div class="formGrp">
+                        <input class="upload_file" readonly title="檔案名稱2" type="text" />
+                        <button class="btn btn-reset btnSm" type="button">清除檔案</button>
+                        <button class="btn btnOrange btnSm" type="button">選擇檔案</button>
+                      </div>
+                      <div class="notice_info">檔案大小請勿超過100MB。檔案上傳僅支援jpg. jpeg. gif. bmp. png. tif. tiff. pdf. odg. odp. ods. odt格式。</div>
                     </div>
                   </div>
+
                   <div class="formGrp">
-                    <label for="" class="formTitle" aria-required="true">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                    <div class="formContent">
-                      <input name="" id="" type="text" title="" />
-                    </div>
+                    <div class="formTitle">建立日期</div>
+                    <div class="formContent">2024/6/25 12:29</div>
                   </div>
                   <div class="formGrp">
-                    <label for="" class="formTitle" aria-required="true">部門/職稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                    <div class="formContent">
-                      <input name="" id="" type="text" title="" />
-                    </div>
-                  </div>
-                  <div class="formGrp">
-                    <label for="email" class="formTitle" aria-required="true">E-mail<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                    <div class="formContent">
-                      <input name="email" value="test@mail.com" type="email" readonly id="email" title="請輸入E-mail" />
-                    </div>
-                  </div>
-                  <div class="formGrp">
-                    <label for="phone" class="formTitle" aria-required="true">聯絡電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                    <div class="formContent">
-                      <input name="phone" id="phone" type="tel" title="請輸入電話" />
-                    </div>
+                    <div class="formTitle">修改日期</div>
+                    <div class="formContent">2024/6/30 13:20</div>
                   </div>
                 </div>
                 <div class="btnGrp formInline">
-                  <button type="button" class="btn btnReset">清除重填</button>
-                  <button type="button" class="btn btnSubmit">下一步</button>
+                  <button type="button" class="nBtn2">取消</button>
+                  <!--<button type="button" class="btn btnRed">刪除</button>-->
+                  <button type="button" class="nBtn">確定送出</button>
                 </div>
               </div>
             </section>
@@ -253,8 +304,8 @@
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <!-- main js-->
     <script src="js/main.js"></script>
-    <!-- 客製js -->
+    <!-- js -->
     <script src="js/customize.js"></script>
-    <script src="js/lp.js"></script>
+    <script src="js/np.js"></script>
   </body>
 </html>

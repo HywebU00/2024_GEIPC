@@ -1,17 +1,20 @@
 .leftBlock {
   .banner {
     padding: 0 0 2.5em 0;
+
     .item {
       color: #666;
       text-align: center;
       font-weight: bold;
       background-color: #eee;
       margin-bottom: 10px;
+
       a {
         width: 100%;
         display: block;
         position: relative;
         @include aspectRatio(3, 1, cover);
+
         &:focus-visible {
           &:after {
             position: absolute;
@@ -27,11 +30,13 @@
       }
     }
   }
+
   .listBlock {
     padding: 0 0 0.5em 0;
     margin-bottom: 1.5em;
     background-color: #fff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
     .title {
       margin: 0 0 1em;
       padding: 0.5em;
@@ -41,19 +46,23 @@
       font-size: 1.25em;
       font-weight: bolder;
     }
+
     ul {
       margin: 0;
       padding: 0 1em;
       list-style-type: none;
+
       li {
         margin: 0 0 0.5em;
         padding: 0 0 0.5em;
         border-bottom: 1px solid #ccc;
+
         time {
           display: inline-block;
           vertical-align: middle;
-          font-size: 0.813rem;
+          font-size: 0.813em;
         }
+
         .dept {
           display: inline-block;
           padding: 0 0.5em;
@@ -61,6 +70,7 @@
           color: #555;
           font-size: 0.813em;
         }
+
         a {
           display: block;
           padding: 0 0 0.25em;
@@ -68,6 +78,7 @@
           font-size: 0.938em;
           color: #333;
           margin: 0.5em 0;
+
           &:hover {
             color: $aHover;
           }
@@ -75,12 +86,14 @@
       }
     }
   }
+
   // 左側節點選單
   .nodeMenu {
     padding: 0 0 0.5em 0;
     margin-bottom: 1.5em;
-    background-color: #fff;
+    // background-color: #fff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
     .title {
       margin: 0 0 1em;
       padding: 0.5em;
@@ -88,28 +101,109 @@
       color: #fff;
       background-color: #666;
       font-size: 1.25em;
+      line-height: 1.4;
       font-weight: bolder;
     }
+
     ul {
       margin: 0;
       padding: 0 1em 0em;
       list-style-type: none;
+
       li {
-        font-size: 0.938rem;
+        font-size: 0.938em;
         margin: 0 0 5px;
         padding: 0 0 5px;
         border-bottom: 1px solid #ccc;
+
         &:last-child {
           border: none;
         }
+
         a {
           display: block;
           padding: 0.5em 0;
           line-height: 1.4em;
           color: #333;
+
           &:hover {
             color: $aHover;
           }
+        }
+      }
+    }
+  }
+}
+
+.leftBlock.memberLeftBlock {
+  transition: all 0.5s;
+
+  @include screen('tablet') {
+    display: block !important;
+    position: fixed !important;
+    top: 200px !important;
+    width: 300px;
+    z-index: 999;
+    left: -260px;
+  }
+
+  @include screen('mobile') {
+    top: 70px;
+  }
+
+  .title {
+    align-items: center;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: center;
+
+    @include screen('tablet') {
+      border-radius: 0.25em 0 0 0;
+    }
+  }
+
+  .user {
+    font-size: 1em;
+    background-color: #f2f2f2;
+    border-bottom: 3px solid #ccc;
+    padding: 15px 20px;
+
+    .i_man_dark {
+      opacity: 0.5;
+      margin-right: 5px;
+    }
+  }
+
+  .handle {
+    font-size: 0;
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 61px;
+    background: url(../images/icon/icon_arrow_right.svg) 50% 50% no-repeat, $colorPrimary;
+    background-size: 14px 14px;
+    border-radius: 0 8px 8px 0;
+    right: -30px;
+    top: 0;
+    display: none;
+    cursor: pointer;
+
+    @include screen('tablet') {
+      display: block;
+    }
+  }
+
+  &.open {
+    left: 16px;
+    transition: all 0.5s;
+  }
+
+  .accordion {
+    ul {
+      li {
+        a {
+          padding: 10px 20px 10px 15px;
+          font-size: 1em;
         }
       }
     }

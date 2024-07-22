@@ -3,8 +3,9 @@ footer {
   text-align: left;
   font-size: 0.813em;
   padding: 60px 0 40px;
-  background: $colorPrimary;
-  color: #fff;
+  // background: $colorPrimary;
+  // color: #fff;
+  background: url(../images/footer_bg.png) center top no-repeat;
 
   .container {
     justify-content: space-between;
@@ -22,7 +23,8 @@ footer {
     margin: 0;
 
     a {
-      color: #fff;
+      // color: #fff;
+      color: #4e4e4e;
       text-decoration: none;
       display: block;
       margin: 0 10px;

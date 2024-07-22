@@ -206,6 +206,32 @@
   }
 }
 
+.topKv {
+  position: relative;
+
+  .btnBox {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    button {
+      background: rgba(#fefef9, 0.9);
+      min-width: 263px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+      border: none !important;
+
+      &:hover {
+        color: #fff;
+        background: $colorPrimary;
+      }
+    }
+  }
+}
+
 section {
   & + section {
     margin-top: clamp(30px, 10%, 100px);
@@ -970,8 +996,11 @@ section {
 
 
 .mapBox {
-  max-width: 1000px;
-  margin: 0 auto;
+  background: url('../images/mapBox_bg.png') left bottom no-repeat;
+
+  .container {
+    max-width: 1000px;
+  }
 
   .content {
     display: flex;
@@ -1144,7 +1173,7 @@ section {
         }
 
         .cls2 {
-          fill: #70aecf;
+          fill: #c7aea0;
         }
 
         .cls3 {
@@ -1152,7 +1181,7 @@ section {
         }
 
         .cls4 {
-          fill: #d4c200;
+          fill: #cfc96c;
         }
       }
 
@@ -1172,7 +1201,7 @@ section {
       }
 
       .cls2 {
-        fill: #bccdd6;
+        fill: #d4cfcc;
       }
 
       .cls3 {
@@ -1180,7 +1209,7 @@ section {
       }
 
       .cls4 {
-        fill: #d1d09c;
+        fill: #ebe8bf;
       }
     }
 
@@ -1327,6 +1356,7 @@ section {
     .selectBox {
       display: flex;
       align-items: center;
+      gap: 10px;
       margin-bottom: 10px;
       padding: 10px 0;
       border: #494949 1px solid;
@@ -1384,6 +1414,11 @@ section {
 }
 
 .projectBox {
+  .control {
+    justify-content: center;
+    gap: 40px;
+  }
+
   .col {
     .item {
       display: flex !important;
@@ -1404,12 +1439,12 @@ section {
 
       &.cls2 {
         .city {
-          background: #bccdd6;
+          background: #d4cfcc;
         }
 
         a {
           &:hover {
-            background: #70aecf;
+            background: #c7aea0;
           }
         }
       }
@@ -1428,12 +1463,12 @@ section {
 
       &.cls4 {
         .city {
-          background: #d1d09c;
+          background: #ebe8bf;
         }
 
         a {
           &:hover {
-            background: #d4c200;
+            background: #cfc96c;
           }
         }
       }
