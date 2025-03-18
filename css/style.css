@@ -8615,6 +8615,31 @@ img {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .adSlider .col,
+  .videoBox .col,
+  .cardBox .col,
+  .resourcesBox .col {
+    display: flex;
+    flex-direction: column;
+  }
+  .adSlider .col .swiper,
+  .videoBox .col .swiper,
+  .cardBox .col .swiper,
+  .resourcesBox .col .swiper {
+    width: 100%;
+  }
+  .adSlider .col .control,
+  .videoBox .col .control,
+  .cardBox .col .control,
+  .resourcesBox .col .control {
+    order: 3;
+  }
+  .adSlider .col .more,
+  .videoBox .col .more,
+  .cardBox .col .more,
+  .resourcesBox .col .more {
+    order: 4;
+  }
   .cardBox,
   .videoBox,
   .adSlider {

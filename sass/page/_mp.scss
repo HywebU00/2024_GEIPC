@@ -735,6 +735,28 @@ section {
   }
 }
 
+.adSlider,
+.videoBox,
+.cardBox,
+.resourcesBox {
+  .col {
+    display: flex;
+    flex-direction: column;
+
+    .swiper {
+      width: 100%;
+    }
+
+    .control {
+      order: 3;
+    }
+
+    .more {
+      order: 4;
+    }
+  }
+}
+
 .cardBox,
 .videoBox,
 .adSlider {
