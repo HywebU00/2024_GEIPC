@@ -108,7 +108,7 @@ kbd {
         padding: 0;
 
         &:hover,
-        &:focus,
+        // &:focus,
         &.active {
           background: $aHover;
           color: #fff;

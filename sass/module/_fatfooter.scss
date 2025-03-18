@@ -40,15 +40,14 @@
       margin-left: -6px;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       background: darken($colorPrimary, 10);
       color: #fff;
       text-decoration: none;
       cursor: pointer;
       border: none;
       box-shadow: none;
-      outline: none;
+      // outline: none;
     }
 
     &.close {
@@ -164,8 +163,7 @@
       top: 45%;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       background: #fff;
     }
 

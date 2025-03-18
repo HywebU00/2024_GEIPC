@@ -1726,13 +1726,29 @@ img {
       clear: both;
     }
   }
-  a:focus-visible {
-    outline: #1aadfa 2px solid;
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    isolation: isolate;
+    outline: 3px solid red;
+    outline-offset: -3px;
+    opacity: 1 !important;
   }
-  @media screen and (max-width: 767px) {
-    a:focus-visible {
-      box-shadow: none;
-    }
+  a:focus-visible .pic,
+  button:focus-visible .pic,
+  input:focus-visible .pic,
+  select:focus-visible .pic,
+  textarea:focus-visible .pic {
+    z-index: -2;
+  }
+  a:focus-visible .title,
+  button:focus-visible .title,
+  input:focus-visible .title,
+  select:focus-visible .title,
+  textarea:focus-visible .title {
+    z-index: -1;
   }
   .accessKey {
     position: absolute;
@@ -1748,10 +1764,9 @@ img {
     }
   }
   a.goCenter {
-    position: absolute;
-    top: -2.2em;
-    left: 50%;
-    margin-left: -480px;
+    position: fixed;
+    top: -100%;
+    left: 0px;
     padding: 0 0.5em;
     height: 2em;
     line-height: 2em;
@@ -1764,12 +1779,7 @@ img {
     border-radius: 0px 0px 4px 4px;
     color: #fff;
   }
-  @media screen and (max-width: 767px) {
-    a.goCenter {
-      display: none;
-    }
-  }
-  a.goCenter:hover, a.goCenter:focus, a.goCenter:focus-visible {
+  a.goCenter:focus-visible {
     background: #283372;
     top: 0;
     opacity: 1;
@@ -1793,7 +1803,7 @@ img {
     color: #1b224c;
   }
   .no-js noscript a:hover, .no-js noscript a:focus-visible {
-    color: #0094e0;
+    color: #006597;
   }
   .no-js .mpSlider .imgContainer {
     display: none;
@@ -1920,14 +1930,11 @@ img {
   }
   a {
     text-decoration: none;
-    color: #00a4f9;
+    color: #0070A8;
   }
-  a:hover, a:focus-visible {
-    color: #0094e0;
+  a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  a:focus-visible {
-    outline: red 2px solid;
   }
   kbd {
     background: #fff;
@@ -2000,11 +2007,10 @@ img {
     margin: 0;
     padding: 0;
   }
-  .fontSize ul li button:hover, .fontSize ul li button:focus, .fontSize ul li button.active,
+  .fontSize ul li button:hover, .fontSize ul li button.active,
   .fontSize ul li a:hover,
-  .fontSize ul li a:focus,
   .fontSize ul li a.active {
-    background: #0094e0;
+    background: #006597;
     color: #fff;
     box-shadow: none;
   }
@@ -2069,13 +2075,13 @@ img {
     transition: 0.3s ease-out;
   }
   .fontSize.typeB ul li button.active {
-    background: #0094e0;
+    background: #006597;
     color: #fff;
     box-shadow: none;
   }
   .fontSize.typeB ul li button:hover, .fontSize.typeB ul li button:focus-visible {
     background: #1b224c;
-    border-inline: #0094e0 2px solid;
+    border-inline: #006597 2px solid;
   }
   .language {
     font-weight: bold;
@@ -2295,7 +2301,7 @@ img {
     padding: 0.2em 0.8em;
   }
   .webSearch .formGrp input:focus-visible {
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px #1a7eb1;
   }
   .webSearch .formGrp button,
   .webSearch .formGrp .btn,
@@ -2351,12 +2357,9 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .webSearch .keywordHot ul a:hover, .webSearch .keywordHot ul a:focus-visible {
-    color: #0094e0;
+  .webSearch .keywordHot ul a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .webSearch .keywordHot ul a:focus-visible {
-    outline: red 2px solid;
   }
   @media screen and (max-width: 767px) {
     .webSearch {
@@ -2471,7 +2474,7 @@ img {
     border: none;
   }
   .mobileSearch .btnGrp .btn:hover, .mobileSearch .btnGrp .btn:focus-visible {
-    color: #14afff;
+    color: #0087ca;
   }
   .mobileSearch .keywordHot {
     flex: 1 1 100%;
@@ -2494,7 +2497,7 @@ img {
     color: #fff;
   }
   .mobileSearch .keywordHot ul a:hover, .mobileSearch .keywordHot ul a:focus-visible {
-    color: #14afff;
+    color: #0087ca;
   }
   .webSearch.typeB {
     position: absolute;
@@ -2603,23 +2606,13 @@ img {
     border: 1px solid #adadad;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btn:focus-visible {
-    background: #c7c7c7;
-    border: 1px solid #adadad;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btn.active {
     background: #ededed;
     cursor: pointer;
   }
-  .btn:hover, .btn:focus-visible {
+  .btn:hover {
     color: #222;
-    outline: none;
   }
   .btnGreen {
     background: #298729;
@@ -2631,15 +2624,6 @@ img {
     border: 1px solid #113911;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btnGreen:focus-visible {
-    background: #1d601d;
-    border: 1px solid #113911;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btnGreen.active {
     background: #2f9b2f;
@@ -2655,15 +2639,6 @@ img {
     border: 1px solid #003366;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btnBlue:focus-visible {
-    background: #004d99;
-    border: 1px solid #003366;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btnBlue.active {
     background: #0073e6;
@@ -2679,15 +2654,6 @@ img {
     border: 1px solid #b48801;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btnYellow:focus-visible {
-    background: #e7ae01;
-    border: 1px solid #b48801;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btnYellow.active {
     background: #fecd36;
@@ -2703,15 +2669,6 @@ img {
     border: 1px solid #6a2300;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btnOrange:focus-visible {
-    background: #9d3400;
-    border: 1px solid #6a2300;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btnOrange.active {
     background: #ea4d00;
@@ -2727,15 +2684,6 @@ img {
     border: 1px solid #6d0000;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btnRed:focus-visible {
-    background: #a00000;
-    border: 1px solid #6d0000;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btnRed.active {
     background: #ed0000;
@@ -2751,15 +2699,6 @@ img {
     border: 1px solid #3c0f3c;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btnPurple:focus-visible {
-    background: #641a65;
-    border: 1px solid #3c0f3c;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btnPurple.active {
     background: #a029a2;
@@ -2775,15 +2714,6 @@ img {
     border: 1px solid #006193;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btnSubmit:focus-visible {
-    background: #0082c6;
-    border: 1px solid #006193;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btnSubmit.active {
     background: #14afff;
@@ -2802,15 +2732,6 @@ img {
     border: 1px solid #006193;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .btnSearch:focus-visible {
-    background: #0082c6;
-    border: 1px solid #006193;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .btnSearch.active {
     background: #14afff;
@@ -2900,12 +2821,9 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .breadcrumb a:hover, .breadcrumb a:focus-visible {
-    color: #0094e0;
+  .breadcrumb a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .breadcrumb a:focus-visible {
-    outline: red 2px solid;
   }
   .divider,
   .dividerVertical {
@@ -3579,7 +3497,7 @@ img {
     color: #333;
     box-sizing: border-box;
   }
-  .category a:hover, .category a:focus, .category a.active {
+  .category a:hover, .category a.active {
     color: #fff;
     background: #00a4f9;
     border: 1px solid #00a4f9;
@@ -3630,12 +3548,9 @@ img {
     border: 1px solid #ddd;
     padding: 0.2em 0.75em;
   }
-  .tag ul li a:hover, .tag ul li a:focus-visible {
-    color: #0094e0;
+  .tag ul li a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .tag ul li a:focus-visible {
-    outline: red 2px solid;
   }
   .scrollToTop {
     width: 50px;
@@ -3663,14 +3578,11 @@ img {
   }
   em[tooltip] {
     text-decoration: none;
-    color: #00a4f9;
+    color: #0070A8;
   }
-  em[tooltip]:hover, em[tooltip]:focus-visible {
-    color: #0094e0;
+  em[tooltip]:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  em[tooltip]:focus-visible {
-    outline: red 2px solid;
   }
   [tooltip]:before,
   [tooltip]:after {
@@ -4010,17 +3922,15 @@ img {
     text-decoration: none;
     color: #121213;
   }
-  .header .navigation .navList li a:hover, .header .navigation .navList li a:focus-visible {
-    color: #0094e0;
+  .header .navigation .navList li a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .header .navigation .navList li a:focus-visible {
-    outline: red 2px solid;
   }
   .header .navigation .submenuBox {
     display: flex;
     align-items: center;
     position: relative;
+    margin-right: 20px;
   }
   .header .navigation .submenuBox > div {
     padding: 0 20px;
@@ -4133,10 +4043,10 @@ img {
     margin-bottom: 0.2em;
   }
   .mainMenu > ul > li.active > a, .mainMenu > ul > li:hover > a {
-    color: #0094e0;
+    color: #006597;
   }
   .mainMenu > ul > li.active > a:after, .mainMenu > ul > li:hover > a:after {
-    border: 2px solid #0094e0;
+    border: 2px solid #006597;
     border-bottom: none;
     border-left: none;
   }
@@ -4145,7 +4055,6 @@ img {
   }
   .mainMenu ul li a {
     display: block;
-    outline: none;
     text-decoration: none;
   }
   .mainMenu ul li ul {
@@ -4170,11 +4079,11 @@ img {
   }
   .mainMenu ul li ul li a:hover, .mainMenu ul li ul li a:focus-visible {
     color: #fff;
-    background: #0094e0;
+    background: #006597;
   }
   .mainMenu ul li ul li.active > a {
     color: #fff;
-    background: #0094e0;
+    background: #006597;
   }
   .mainMenu ul li ul li.hasChild > ul {
     z-index: 999;
@@ -4360,6 +4269,7 @@ img {
     font-size: 0.813em;
     padding: 60px 0 40px;
     background: url(../images/footer_bg.png) center top no-repeat;
+    background-size: cover;
   }
   footer .container {
     justify-content: space-between;
@@ -4465,14 +4375,13 @@ img {
     top: 12px;
     margin-left: -6px;
   }
-  .fatFooter .btnFatFooter:hover, .fatFooter .btnFatFooter:focus {
+  .fatFooter .btnFatFooter:hover {
     background: #0e1126;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
     border: none;
     box-shadow: none;
-    outline: none;
   }
   .fatFooter .btnFatFooter.close:before {
     transform: rotate(135deg);
@@ -4556,12 +4465,9 @@ img {
     padding: 0.5em 0;
     background: none;
   }
-  .fatFooter nav ul li ul li a:hover, .fatFooter nav ul li ul li a:focus-visible {
-    color: #0094e0;
+  .fatFooter nav ul li ul li a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .fatFooter nav ul li ul li a:focus-visible {
-    outline: red 2px solid;
   }
   @media screen and (max-width: 575px) {
     .fatFooter nav ul li ul li a {
@@ -4586,7 +4492,7 @@ img {
     border-color: #000;
     top: 45%;
   }
-  .fatFooter.typeB .btnFatFooter:hover, .fatFooter.typeB .btnFatFooter:focus {
+  .fatFooter.typeB .btnFatFooter:hover {
     background: #fff;
   }
   .fatFooter.typeB .btnFatFooter.close:before {
@@ -4888,10 +4794,6 @@ img {
     .flexForm .formContent .datePick > input[type=text], .flexForm .formContent .datePick > input[type=date] {
       width: calc(100% - 0.6em);
     }
-  }
-  .flexForm .formContent .datePick > input[type=text]:focus-visible, .flexForm .formContent .datePick > input[type=date]:focus-visible {
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .flexForm .formContent .datePick > input[type=text] {
     padding-right: 2em;
@@ -5706,29 +5608,6 @@ img {
       width: 100%;
     }
   }
-  button:focus-visible,
-  input[type=text]:focus-visible,
-  input[type=reset]:focus-visible,
-  input[type=file]:focus-visible,
-  input[type=tel]:focus-visible,
-  input[type=email]:focus-visible,
-  input[type=password]:focus-visible,
-  textarea:focus-visible,
-  select:focus-visible {
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
-    outline: none;
-  }
-  button:focus,
-  input[type=text]:focus,
-  input[type=reset]:focus,
-  input[type=file]:focus,
-  input[type=tel]:focus,
-  input[type=email]:focus,
-  input[type=password]:focus,
-  textarea:focus,
-  select:focus {
-    outline: none;
-  }
   select {
     line-height: 1.35em;
     padding: 0.5em 24px 0.5em 0.5em;
@@ -5737,7 +5616,6 @@ img {
     background-size: 16px;
   }
   select option {
-    outline: none;
     border: none;
   }
   select:-moz-focusring {
@@ -5752,7 +5630,6 @@ img {
     height: 1em;
     background-color: #f7f6ee;
     border: 2px solid #ccc;
-    outline: none;
   }
   input[type=radio] {
     border-radius: 50%;
@@ -5761,7 +5638,6 @@ img {
   input[type=radio]:checked {
     border-color: #00a4f9;
     background-color: #00a4f9;
-    outline: none;
   }
   input[type=checkbox]:checked {
     background-image: url(../images/basic/icon_checked.svg);
@@ -5799,15 +5675,6 @@ img {
     border: 1px solid #006193;
     cursor: pointer;
     color: #fff;
-    outline: none;
-  }
-  .uploadGrp .uploadBtn:focus-visible {
-    background: #0082c6;
-    border: 1px solid #006193;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
   }
   .uploadGrp .uploadBtn.active {
     background: #14afff;
@@ -6118,12 +5985,9 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .lp table td a:hover, .lp table td a:focus-visible {
-    color: #0094e0;
+  .lp table td a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .lp table td a:focus-visible {
-    outline: red 2px solid;
   }
   .lp table td.date {
     text-align: center;
@@ -6170,7 +6034,7 @@ img {
   }
   .lp .list > ul > li > a:hover,
   .lp .list ol > li > a:hover {
-    color: #0094e0;
+    color: #006597;
   }
   .lp .list > ul > li > a .num,
   .lp .list ol > li > a .num {
@@ -6241,12 +6105,9 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .submenu li a:hover, .submenu li a:focus-visible {
-    color: #0094e0;
+  .submenu li a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .submenu li a:focus-visible {
-    outline: red 2px solid;
   }
   .submenu li a::before {
     content: counter(my-counter) "";
@@ -6267,8 +6128,8 @@ img {
     content: ".";
   }
   .submenu li a:hover, .submenu li a:focus-visible {
-    border: 1px solid #0094e0;
-    color: #0094e0;
+    border: 1px solid #006597;
+    color: #006597;
   }
   .tabSet {
     margin: 30px auto;
@@ -6289,11 +6150,6 @@ img {
     background: #ddd;
     cursor: pointer;
   }
-  .tabSet .modeBBtn:focus-visible,
-  .tabSet .tabBtn:focus-visible {
-    outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa inset;
-  }
   .tabSet .modeBBtn.active,
   .tabSet .tabBtn.active {
     cursor: default;
@@ -6308,15 +6164,6 @@ img {
   }
   .tabSet .tabContent.active {
     display: block;
-  }
-  .tabSet .tabContent a:focus {
-    outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa inset;
-  }
-  @media screen and (max-width: 767px) {
-    .tabSet .tabContent a:focus {
-      box-shadow: none;
-    }
   }
   .tabSet .tabContent .content ul {
     margin: 0;
@@ -6334,9 +6181,6 @@ img {
   }
   .tabSet.modeB .tabContent .content {
     display: none;
-  }
-  .tabSet.modeB .tabContent .content a:focus-visible {
-    outline: #1aadfa 2px solid;
   }
   .tabSet.modeB .modeBBtn {
     display: block;
@@ -6357,12 +6201,9 @@ img {
     color: #555;
     position: relative;
   }
-  .thumbnail a:hover, .thumbnail a:focus-visible {
-    color: #0094e0;
+  .thumbnail a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .thumbnail a:focus-visible {
-    outline: red 2px solid;
   }
   .thumbnail a:focus-visible:before {
     content: "";
@@ -6374,7 +6215,7 @@ img {
     right: 0;
     bottom: 0;
     z-index: 1;
-    box-shadow: 0px 0px 0px 1px #0094e0 inset;
+    box-shadow: 0px 0px 0px 1px #006597 inset;
   }
   .thumbnail .imgContainer {
     overflow: hidden;
@@ -6499,8 +6340,8 @@ img {
   div.function ul li button:hover, div.function ul li button:focus-visible,
   div.function ul li a:hover,
   div.function ul li a:focus-visible {
-    background: #0094e0;
-    border-color: #0094e0;
+    background: #006597;
+    border-color: #006597;
   }
   div.function ul li.icon_back a:before {
     background: url(../images/basic/icon_back.svg) no-repeat center center;
@@ -6551,7 +6392,7 @@ img {
     position: relative;
   }
   .functionPanel .function ul li a:hover, .functionPanel .function ul li a:focus-visible {
-    background: #0094e0;
+    background: #006597;
     color: #fff;
   }
   .functionPanel .function ul li a:hover:before, .functionPanel .function ul li a:focus-visible:before {
@@ -6640,10 +6481,10 @@ img {
     background: url(../images/basic/icon_share.svg) no-repeat center center;
     background-size: 24px;
   }
-  .functionPanel .share .shareButton:hover, .functionPanel .share .shareButton:focus-visible {
-    background: #0094e0;
+  .functionPanel .share .shareButton:focus-visible, .functionPanel .share .shareButton:hover {
+    background: #006597;
   }
-  .functionPanel .share .shareButton:hover:before, .functionPanel .share .shareButton:focus-visible:before {
+  .functionPanel .share .shareButton:focus-visible:before, .functionPanel .share .shareButton:hover:before {
     filter: invert(100%);
   }
   .functionPanel .share ul {
@@ -6676,12 +6517,11 @@ img {
     padding: 0;
     width: 32px;
     height: 32px;
-    border-radius: 50%;
   }
-  .functionPanel .share ul li a:hover, .functionPanel .share ul li a:focus-visible {
+  .functionPanel .share ul li a:hover {
     background: transparent;
   }
-  .functionPanel .share ul li a:hover img, .functionPanel .share ul li a:focus-visible img {
+  .functionPanel .share ul li a:hover img {
     filter: grayscale(1);
   }
   .marquee .swiperBox {
@@ -7188,7 +7028,7 @@ img {
     margin: 0.5em 0;
   }
   .leftBlock .listBlock ul li a:hover {
-    color: #0094e0;
+    color: #006597;
   }
   .leftBlock .nodeMenu {
     padding: 0 0 0.5em 0;
@@ -7226,7 +7066,7 @@ img {
     color: #333;
   }
   .leftBlock .nodeMenu ul li a:hover {
-    color: #0094e0;
+    color: #006597;
   }
   .leftBlock.memberLeftBlock {
     transition: all 0.5s;
@@ -7427,11 +7267,7 @@ img {
     box-sizing: border-box;
     transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: translateX(-300px);
-  }
-  @media screen and (min-width: 767px) {
-    .mobileSidebar {
-      display: none;
-    }
+    display: none;
   }
   .mobileSidebar .mobileArea {
     width: 300px;
@@ -7733,9 +7569,6 @@ img {
     background: none;
     border: none;
   }
-  .mobileSidebar button.sidebarClose:hover, .mobileSidebar button.sidebarClose:focus-visible {
-    box-shadow: none;
-  }
   .mobileSidebar button.sidebarClose:before {
     position: absolute;
     width: 15px;
@@ -7948,7 +7781,7 @@ img {
   .swiperDots .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
     /* 點 active 的顏色 */
-    background: #0094e0;
+    background: #006597;
   }
   .swiperDots .swiper-pagination-bullet.swiper-pagination-bullet-active:hover {
     /* 點 active  hover的顏色 */
@@ -8610,26 +8443,6 @@ img {
   .projectBox .item {
     position: relative;
   }
-  .resourcesBox .item a:focus-visible,
-  .cardBox .item a:focus-visible,
-  .videoBox .item a:focus-visible,
-  .adSlider .item a:focus-visible,
-  .projectBox .item a:focus-visible {
-    outline: none;
-  }
-  .resourcesBox .item a:focus-visible::before,
-  .cardBox .item a:focus-visible::before,
-  .videoBox .item a:focus-visible::before,
-  .adSlider .item a:focus-visible::before,
-  .projectBox .item a:focus-visible::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    display: block;
-    box-sizing: border-box;
-    border: 2px solid red;
-    z-index: 2;
-  }
   .resourcesBox .item .pic,
   .cardBox .item .pic,
   .videoBox .item .pic,
@@ -8745,7 +8558,8 @@ img {
   .videoBox .control .arrows:focus-visible,
   .adSlider .control .arrows:focus-visible,
   .projectBox .control .arrows:focus-visible {
-    outline: 2px solid red;
+    outline: 3px solid red;
+    outline-offset: -3px;
   }
   .resourcesBox .control .arrows::before,
   .cardBox .control .arrows::before,
@@ -8836,11 +8650,6 @@ img {
     height: 10%;
     display: block;
     background: linear-gradient(to bottom, rgb(235, 236, 237) 0%, rgba(235, 236, 237, 0) 100%);
-  }
-  .cardBox .item a,
-  .videoBox .item a,
-  .adSlider .item a {
-    outline: none;
   }
   .cardBox .item .title,
   .videoBox .item .title,
@@ -9005,7 +8814,6 @@ img {
     align-items: center;
     justify-content: center;
     background: #fff;
-    outline: none;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   }
   .mapBox {
@@ -9144,7 +8952,7 @@ img {
   .mapBox .mainIsland svg .active,
   .mapBox .mainIsland svg .clickActive,
   .mapBox .mainIsland svg a:focus-visible {
-    outline: none;
+    outline: none !important;
     z-index: 9;
   }
   .mapBox .mainIsland svg a:hover .cls1,
@@ -9346,9 +9154,6 @@ img {
     padding: 5px 10px;
     margin: 0;
   }
-  .mapBox .cityBox button:focus-visible {
-    background: #54a7d5;
-  }
   .projectBox .control {
     justify-content: center;
     gap: 40px;
@@ -9431,9 +9236,6 @@ img {
     position: relative;
     transition: all 0.3s linear;
   }
-  .projectBox .col .item a:focus-visible {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px red;
-  }
   .projectBox .col .item a::before {
     content: "";
     width: 30px;
@@ -9444,7 +9246,6 @@ img {
     top: 50%;
     transform: translate(-50%, -50%);
     border: none;
-    outline: none;
   }
   .projectBox .col .item a.download::before {
     background: url("../images/icon_download.png") center no-repeat;
@@ -9521,14 +9322,11 @@ img {
   }
   .cp a, .apply a {
     text-decoration: none;
-    color: #00a4f9;
+    color: #0070A8;
   }
-  .cp a:hover, .apply a:hover, .cp a:focus-visible, .apply a:focus-visible {
-    color: #0094e0;
+  .cp a:hover, .apply a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .cp a:focus-visible, .apply a:focus-visible {
-    outline: red 2px solid;
   }
   .cp .publishInfo, .apply .publishInfo {
     font-size: 0.875em;
@@ -9889,12 +9687,9 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .webLink li a:hover, .webLink li a:focus-visible {
-    color: #0094e0;
+  .webLink li a:hover {
+    color: #006597;
     cursor: pointer;
-  }
-  .webLink li a:focus-visible {
-    outline: red 2px solid;
   }
   .Syncing_slider {
     margin-bottom: 2rem;
@@ -10145,11 +9940,11 @@ img {
     transition: all 0.3s;
     opacity: 1;
   }
-  .lp .videoList a:hover .imgContainer img, .lp .videoList a:focus .imgContainer img {
+  .lp .videoList a:hover .imgContainer img {
     transform: scale(1.1);
     transition: all 0.3s;
   }
-  .lp .videoList a:hover .imgContainer::before, .lp .videoList a:focus .imgContainer::before {
+  .lp .videoList a:hover .imgContainer::before {
     transition: all 0.3s;
     opacity: 0;
   }
@@ -10473,10 +10268,6 @@ img {
     -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s;
   }
-  .memberPage .flexForm:not(.formBox) .formCard .formContent input:focus {
-    box-shadow: none;
-    border-bottom: red 1px solid;
-  }
   .memberPage .flexForm:not(.formBox) .formCard .btnBox {
     display: flex;
     gap: 20px;
@@ -10756,7 +10547,7 @@ img {
 .colorA .fatFooter .btnFatFooter {
   background: #298729;
 }
-.colorA .fatFooter .btnFatFooter:hover, .colorA .fatFooter .btnFatFooter:focus {
+.colorA .fatFooter .btnFatFooter:hover {
   background: #1d601d;
 }
 .colorA .fatFooter nav > ul > li > a {
@@ -10849,14 +10640,6 @@ img {
 .colorA .tabSet .tabItems button.active {
   background: #298729;
 }
-.colorA .tabContent a:focus {
-  box-shadow: 0 0px 0px 2px #3e933e inset;
-}
-@media screen and (max-width: 767px) {
-  .colorA .tabContent a:focus {
-    box-shadow: none;
-  }
-}
 .colorA .cp a, .colorA .apply a {
   color: #298729;
 }
@@ -10901,25 +10684,10 @@ img {
   border-color: #257a25;
   color: #257a25;
 }
-.colorA button:focus-visible,
-.colorA input[type=text]:focus-visible,
-.colorA input[type=reset]:focus-visible,
-.colorA input[type=file]:focus-visible,
-.colorA input[type=tel]:focus-visible,
-.colorA input[type=email]:focus-visible,
-.colorA input[type=password]:focus-visible,
-.colorA textarea:focus-visible,
-.colorA select:focus-visible {
-  border-color: #2f9b2f;
-  box-shadow: 0px 0px 0px 2px #2f9b2f;
-}
 .colorA input[type=checkbox]:checked,
-.colorA input[type=checkbox]:focus,
-.colorA input[type=radio]:checked,
-.colorA input[type=radio]:focus {
+.colorA input[type=radio]:checked {
   border-color: #298729;
   background-color: #298729;
-  outline: none;
 }
 .colorA input[type=radio]:checked {
   box-shadow: #fff 0 0 0 3px inset, #298729 0 0 0 2px;
@@ -11038,7 +10806,7 @@ img {
 .colorB .fatFooter .btnFatFooter {
   background: #c32727;
 }
-.colorB .fatFooter .btnFatFooter:hover, .colorB .fatFooter .btnFatFooter:focus {
+.colorB .fatFooter .btnFatFooter:hover {
   background: #991f1f;
 }
 .colorB .fatFooter nav > ul > li > a {
@@ -11131,14 +10899,6 @@ img {
 .colorB .tabSet .tabItems button.active {
   background: #c32727;
 }
-.colorB .tabContent a:focus {
-  box-shadow: 0 0px 0px 2px #1aadfa inset;
-}
-@media screen and (max-width: 767px) {
-  .colorB .tabContent a:focus {
-    box-shadow: none;
-  }
-}
 .colorB .cp a, .colorB .apply a {
   color: #c32727;
 }
@@ -11183,25 +10943,10 @@ img {
   border-color: #0094e0;
   color: #0094e0;
 }
-.colorB button:focus-visible,
-.colorB input[type=text]:focus-visible,
-.colorB input[type=reset]:focus-visible,
-.colorB input[type=file]:focus-visible,
-.colorB input[type=tel]:focus-visible,
-.colorB input[type=email]:focus-visible,
-.colorB input[type=password]:focus-visible,
-.colorB textarea:focus-visible,
-.colorB select:focus-visible {
-  border-color: #d52e2e;
-  box-shadow: 0px 0px 0px 2px #d52e2e;
-}
 .colorB input[type=checkbox]:checked,
-.colorB input[type=checkbox]:focus,
-.colorB input[type=radio]:checked,
-.colorB input[type=radio]:focus {
+.colorB input[type=radio]:checked {
   border-color: #c32727;
   background-color: #c32727;
-  outline: none;
 }
 .colorB input[type=radio]:checked {
   box-shadow: #fff 0 0 0 3px inset, #c32727 0 0 0 2px;

@@ -18,19 +18,19 @@
     border: 1px solid darken($btnBg, 20);
     cursor: pointer;
     color: #fff;
-    outline: none;
+    // outline: none;
     // @include gradient(lighten($btnBg, 10), darken($btnBg, 18), vertical);
   }
 
-  &:focus-visible {
-    background: darken($btnBg, 10); // Old browsers
-    border: 1px solid darken($btnBg, 20);
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
-    // @include gradient(lighten($btnBg, 10), darken($btnBg, 18), vertical);
-  }
+  // &:focus-visible {
+  //   background: darken($btnBg, 10); // Old browsers
+  //   border: 1px solid darken($btnBg, 20);
+  //   cursor: pointer;
+  //   color: #fff;
+  //   outline: none;
+  //   box-shadow: 0 0px 0px 2px #fff, 0 0px 0px 4px red;
+  //   // @include gradient(lighten($btnBg, 10), darken($btnBg, 18), vertical);
+  // }
 
   &.active {
     background: lighten($btnBg, 5);
@@ -67,10 +67,10 @@
   @include btnSetting;
   text-shadow: none;
 
-  &:hover,
-  &:focus-visible {
+  // &:focus-visible,
+  &:hover {
     color: $btnWordColor;
-    outline: none;
+    // outline: none;
   }
 }
 

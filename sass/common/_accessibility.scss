@@ -1,12 +1,28 @@
 // 以下皆是設定 測試無障礙關閉js 的純css排版
 
 // tab的外框線
-a:focus-visible {
-  outline: $aFocus 2px solid;
+a,
+button,
+input,
+select,
+textarea {
+  &:focus-visible {
+    isolation: isolate;
+    outline: 3px solid red;
+    outline-offset: -3px;
+    opacity: 1 !important;
 
-  // box-shadow: 0 0px 0px 2px $aFocus inset;
-  @include screen('mobile') {
-    box-shadow: none;
+    // box-shadow: 0 0px 0px 2px $aFocus inset;
+    // @include screen('mobile') {
+    //   box-shadow: none;
+    // }
+    .pic {
+      z-index: -2;
+    }
+
+    .title {
+      z-index: -1;
+    }
   }
 }
 
@@ -25,10 +41,9 @@ a:focus-visible {
 }
 
 a.goCenter {
-  position: absolute;
-  top: -2.2em;
-  left: 50%;
-  margin-left: -480px;
+  position: fixed;
+  top: -100%;
+  left: 0px;
   padding: 0 0.5em;
   height: 2em;
   line-height: 2em;
@@ -41,12 +56,6 @@ a.goCenter {
   border-radius: 0px 0px 4px 4px;
   color: #fff;
 
-  @include screen('mobile') {
-    display: none;
-  }
-
-  &:hover,
-  &:focus,
   &:focus-visible {
     background: lighten($colorPrimary, 10);
     top: 0;

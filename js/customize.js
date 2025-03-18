@@ -1,6 +1,5 @@
 // -----  基本功能開關   ---------------------------------------------------
 window.addEventListener('load', () => {
-  topNav(); // 手機版顯示nav選單
   navSticky(); // 捲動時固定主選單
   xSlider('.language button', '.language ul'); //語系
   // fontSize(); // 全站字體
@@ -77,7 +76,7 @@ window.addEventListener('load', () => {
   });
   const mpSlider = new Swiper('.mpSlider .swiper', {
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     effect: 'fade',
     // autoplay: {
     //   delay: 5000,
@@ -285,7 +284,7 @@ window.addEventListener('load', () => {
     // slidesPerView: 'auto',
     // effect: 'fade', //淡入
     loopAdditionalSlides: 3,
-    autoplay: true,
+    // autoplay: true,
     // loop: true,
     centeredSlides: true,
     fadeEffect: {

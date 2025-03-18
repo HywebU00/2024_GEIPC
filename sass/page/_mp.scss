@@ -597,19 +597,19 @@ section {
   .item {
     position: relative;
 
-    a:focus-visible {
-      outline: none;
+    // a:focus-visible {
+    //   outline: none;
 
-      &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        display: block;
-        box-sizing: border-box;
-        border: 2px solid red;
-        z-index: 2;
-      }
-    }
+    //   &::before {
+    //     content: '';
+    //     position: absolute;
+    //     inset: 0;
+    //     display: block;
+    //     box-sizing: border-box;
+    //     border: 2px solid red;
+    //     z-index: 2;
+    //   }
+    // }
 
     .pic {
       width: 100%;
@@ -687,7 +687,8 @@ section {
       cursor: pointer;
 
       &:focus-visible {
-        outline: 2px solid red;
+        outline: 3px solid red;
+        outline-offset: -3px;
       }
 
       &::before {
@@ -766,9 +767,9 @@ section {
   }
 
   .item {
-    a {
-      outline: none;
-    }
+    // a {
+    //   outline: none;
+    // }
 
     .title {
       position: relative;
@@ -995,7 +996,7 @@ section {
       align-items: center;
       justify-content: center;
       background: #fff;
-      outline: none;
+      // outline: none;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     }
   }
@@ -1172,7 +1173,7 @@ section {
       .active,
       .clickActive,
       a:focus-visible {
-        outline: none;
+        outline: none !important;
         z-index: 9;
 
         .cls1 {
@@ -1413,9 +1414,9 @@ section {
       padding: 5px 10px;
       margin: 0;
 
-      &:focus-visible {
-        background: #54a7d5;
-      }
+      // &:focus-visible {
+      //   background: #54a7d5;
+      // }
     }
   }
 }
@@ -1539,9 +1540,9 @@ section {
         position: relative;
         transition: all 0.3s linear;
 
-        &:focus-visible {
-          box-shadow: 0 0 0 2px #fff, 0 0 0 4px red;
-        }
+        // &:focus-visible {
+        //   box-shadow: 0 0 0 2px #fff, 0 0 0 4px red;
+        // }
 
         &::before {
           content: '';
@@ -1553,7 +1554,7 @@ section {
           top: 50%;
           transform: translate(-50%, -50%);
           border: none;
-          outline: none;
+          // outline: none;
         }
 
         &.download {

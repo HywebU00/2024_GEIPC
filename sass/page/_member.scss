@@ -78,16 +78,15 @@
             transition: background-color 5000s ease-in-out 0s;
           }
 
-          &:focus {
-            box-shadow: none;
-            border-bottom: red 1px solid;
+          // &:focus {
+          //   box-shadow: none;
+          //   border-bottom: red 1px solid;
 
-            // & ~ label {
-            //   font-size: 13px;
-            //   top: 0%;
-            // }
-          }
-
+          //   // & ~ label {
+          //   //   font-size: 13px;
+          //   //   top: 0%;
+          //   // }
+          // }
         }
       }
 

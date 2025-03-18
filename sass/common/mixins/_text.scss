@@ -41,15 +41,15 @@
   text-decoration: $line;
   color: $color;
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     color: $aHover;
     cursor: pointer;
   }
 
-  &:focus-visible {
-    outline: red 2px solid;
-  }
+  // &:focus-visible {
+  //   outline: red 2px solid;
+  //   outline-offset: -2px;
+  // }
 }
 
 //px轉rem 使用方式 Rem(px) px直接輸入數字即可

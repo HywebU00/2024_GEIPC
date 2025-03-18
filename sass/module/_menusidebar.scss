@@ -13,10 +13,7 @@
   box-sizing: border-box;
   transition: 0.3s $cubic;
   transform: translateX(-300px);
-
-  @include screen('mobileMin') {
-    display: none;
-  }
+  display: none;
 
   .mobileArea {
     width: 300px;
@@ -286,11 +283,6 @@
     border: none;
     background: none;
     border: none;
-
-    &:hover,
-    &:focus-visible {
-      box-shadow: none;
-    }
 
     &:before {
       position: absolute;
