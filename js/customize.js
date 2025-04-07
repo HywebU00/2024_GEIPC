@@ -82,6 +82,10 @@ window.addEventListener('load', () => {
     slidesPerView: 1,
     loop: false,
     effect: 'fade',
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
     // autoplay: {
     //   delay: 5000,
     //   stopOnLastSlide: false,
@@ -346,13 +350,19 @@ window.addEventListener('load', () => {
   if (bannerInfo) {
     let bannerItem = document.querySelectorAll('.bannerInfo .item');
     jsSlideDown(bannerItem[0].querySelector('.info'));
+    bannerInfoBtn.forEach((item) => item.setAttribute('aria-expanded', 'false'));
+    bannerInfoBtn[0].setAttribute('aria-expanded', 'true');
     bannerItem[0].classList.add('active');
     bannerInfoBtn.forEach((item) => {
       item.addEventListener('click', () => {
+        item.setAttribute('aria-expanded', 'true');
         const siblings = Array.prototype.filter.call(item.parentNode.parentNode.children, (child) => {
           return child !== item.parentNode;
         });
-        siblings.forEach((content) => jsSlideUp(content.querySelector('.info')));
+        siblings.forEach((content) => {
+          content.querySelector('button').setAttribute('aria-expanded', 'false');
+          jsSlideUp(content.querySelector('.info'));
+        });
         jsSlideDown(item.parentNode.querySelector('.info'));
         mpSlider.slideTo([...bannerItem].indexOf(item.parentNode));
 
