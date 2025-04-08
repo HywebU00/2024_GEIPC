@@ -494,4 +494,10 @@ window.addEventListener('load', () => {
       checkData();
     });
   });
+
+  const allSwiperArrow = document.querySelectorAll('.swiperArrow');
+  allSwiperArrow?.forEach((item) => {
+    item.setAttribute('aria-hidden', 'true');
+    item.setAttribute('tabindex', '-1');
+  });
 })();
