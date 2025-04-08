@@ -49,8 +49,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.cpSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     // 切換箭頭
     navigation: {
@@ -58,10 +61,10 @@ window.addEventListener('load', () => {
       prevEl: '.cpSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -71,6 +74,9 @@ window.addEventListener('load', () => {
       },
     },
   });
+
+  const cpSwiperPages = document.querySelectorAll('.cpSlider .swiper-pagination-bullet');
+  cpSwiperPages?.forEach((item) => item.addEventListener('click', () => cpSwiper.slideTo(item.dataset.swiperIndex)));
 
   //大圖輪播
   let mpSliderItem = document.querySelectorAll('.mpSlider .swiper-slide');
@@ -82,10 +88,10 @@ window.addEventListener('load', () => {
     slidesPerView: 1,
     loop: false,
     effect: 'fade',
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     // autoplay: {
     //   delay: 5000,
     //   stopOnLastSlide: false,
@@ -131,10 +137,10 @@ window.addEventListener('load', () => {
       prevEl: '.resourcesBox .prev', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     lazy: true,
     breakpoints: {
       320: {
@@ -161,10 +167,10 @@ window.addEventListener('load', () => {
       prevEl: '.cardBox .prev', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     lazy: true,
     breakpoints: {
       320: {
@@ -191,10 +197,10 @@ window.addEventListener('load', () => {
       prevEl: '.videoBox .prev', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     lazy: true,
     breakpoints: {
       320: {
@@ -221,10 +227,10 @@ window.addEventListener('load', () => {
       prevEl: '.projectBox .prev', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     lazy: true,
     breakpoints: {
       320: {
@@ -252,10 +258,10 @@ window.addEventListener('load', () => {
       prevEl: '.adSlider .prev', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -279,10 +285,10 @@ window.addEventListener('load', () => {
       prevEl: '.marquee .prevSlider', //自行設定樣式
       disabledClass: '.marquee marquee-arrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
   });
 
   //cp_photo
@@ -297,10 +303,10 @@ window.addEventListener('load', () => {
       prevEl: '.navSlider .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -334,10 +340,10 @@ window.addEventListener('load', () => {
       prevEl: '.sliderFor .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     lazy: true,
     thumbs: {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
