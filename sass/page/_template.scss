@@ -147,3 +147,29 @@ body {
 .hidden {
   display: none;
 }
+
+#lightBox {
+  width: 80%;
+  max-width: 800px !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+
+  h2 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  a:focus-visible {
+    outline-offset: 2px;
+  }
+
+  .f-button.is-close-btn {
+    opacity: 1 !important;
+
+    &:focus-visible {
+      box-shadow: none !important;
+      outline: 2px solid red !important;
+      outline-offset: 0px !important;
+    }
+  }
+}
