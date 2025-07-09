@@ -47,6 +47,50 @@
     margin: 0.5em 0;
   }
 
+  .surveyForm {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .title {
+      text-align: center;
+      font-size: Rem(30);
+      font-weight: bold;
+    }
+
+    p {
+      text-align: center;
+      margin: 0;
+    }
+
+    .formTitle {
+      max-width: none !important;
+      margin-bottom: 10px;
+    }
+
+    .formContent {
+      max-width: none !important;
+      width: 100%;
+
+      textarea {
+        width: 100%;
+        margin: 0.3em 0.3em 0 0.3em;
+      }
+
+      span {
+        color: #888;
+        font-size: Rem(13);
+        margin: 0 0 0 0.3em;
+      }
+    }
+
+    .btnGrp {
+      padding: 0;
+    }
+  }
+
   .formGrp {
     .btnVerify {
       @extend .btnNormal;

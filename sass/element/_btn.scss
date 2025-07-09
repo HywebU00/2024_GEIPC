@@ -108,7 +108,7 @@
 
 .btnSubmit {
   // @extend %btn;
-  @include btnSetting($formFocus, #fff);
+  @include btnSetting($colorPrimary, #fff);
 }
 
 .btnReset {

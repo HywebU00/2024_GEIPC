@@ -1352,8 +1352,8 @@ input[type='checkbox']:checked,
 // input[type='checkbox']:focus,
 // input[type='radio']:focus,
 input[type='radio']:checked {
-  border-color: $formFocus;
-  background-color: $formFocus;
+  border-color: $colorPrimary;
+  background-color: $colorPrimary;
   // outline: none;
 }
 
@@ -1362,7 +1362,7 @@ input[type='checkbox']:checked {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 98%;
-  box-shadow: $formFocus 0 0 0 2px;
+  box-shadow: $colorPrimary 0 0 0 2px;
   border-radius: 2px;
 }
 
